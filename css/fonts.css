@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Titillium;
+    src: local(Titillium-Regular),
+      url(/path/to/Titillium-Regular.woff2) format("woff2"),
+      url(/path/to/Titillium-Regular.woff) format("woff"),
+      url(/path/to/Titillium-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family: Titillium;
+    src: local(Titillium-Semibold),
+      url(/path/to/Titillium-Semibold.woff2) format("woff2"),
+      url(/path/to/Titillium-Semibold.woff) format("woff"),
+      url(/path/to/Titillium-Semibold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  h2 {
+    font-family: Titillium;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #030303;
+  }
+  .B3 {
+    font-family: Titillium;
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  .Lead-centre {
+    font-family: Titillium;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #030303;
+  }
+  .button-style {
+    font-family: Titillium;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #030303;
+  }
+  .top-nav {
+    font-family: Titillium;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .Body-sml {
+    font-family: Titillium;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(3, 3, 3, 0.5);
+  }
