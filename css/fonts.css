@@ -69,12 +69,6 @@
     line-height: 1.67;
     letter-spacing: normal;
     color: white;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
   }
   .Body-sml {
     font-family: Titillium;
