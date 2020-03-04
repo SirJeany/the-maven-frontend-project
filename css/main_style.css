@@ -29,8 +29,8 @@ footer {
 
 .footer-nav-general {
 
-  width: 0;
-  margin: 1rem 25% 2rem 0rem;
+  /* width: 0; */
+  margin: 1rem 12.5% 2rem 12.5%;
   /* padding: 2rem; */
   float: left;
 }
