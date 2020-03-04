@@ -26,3 +26,11 @@ footer {
   height: 20rem;
   background-color: #36414c;
 }
+
+.footer-nav-general {
+
+  width: 0;
+  margin: 1rem 25% 2rem 0rem;
+  /* padding: 2rem; */
+  float: left;
+}
