@@ -113,3 +113,18 @@
     text-align: center;
     color: rgba(3, 3, 3, 0.5);
   }
+
+  #subHeadingText {
+    width: 882px;
+    height: 78px;
+    font-family: Titillium;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: center;
+    /* color: var(--charcoal-grey); */
+    color: rgb(56, 54, 54);
+  }
