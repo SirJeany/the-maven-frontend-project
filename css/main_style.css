@@ -30,6 +30,10 @@ body {
 
 /* Right Middle Area */
 
+.aside-divs {
+  height: 190px;
+}
+
 .aside-reason-imgs {
   width: 75px;
   height: 75px;
