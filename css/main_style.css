@@ -58,16 +58,6 @@ body {
   /* white-space: nowrap; */
 }
 
-#whyMaven {
-  /* margin-left: 10%; */
-  /* max-width: 745px !important;
-  max-height: 517px; */
-}
-
-#reasonsMaven {
-  /* max-width: 745px !important;
-  max-height: 517px; */
-}
 
 /* Our Courses section */
 .our-courses-section {
@@ -84,7 +74,18 @@ body {
 }
 
 .career-find-out-more-btn {
+  color: #36414c;
+  background-color: white;
+  border-color: #5b9de3;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  box-shadow: ;
+}
 
+.career-find-out-more-btn:hover {
+  color: white;
+  background-color: #5b9de3;
+  border-color: white;
 }
 
 /* What students think section: */

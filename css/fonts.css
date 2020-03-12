@@ -185,3 +185,15 @@
   letter-spacing: normal;
   color: #707277;
 }
+
+.career-find-out-more-btn {
+  font-family: 'Titillium Web', Titillium , sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b9de3;
+}
