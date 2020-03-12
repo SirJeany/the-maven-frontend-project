@@ -37,7 +37,7 @@ body {
 /* Right Middle Area */
 
 .aside-divs {
-  height: 190px;
+  height: auto;
 }
 
 .aside-reason-imgs {
@@ -55,6 +55,7 @@ body {
 .reason-aside-body-text {
   line-height: 18px;
   font-size: 16px;
+  /* white-space: nowrap; */
 }
 
 #whyMaven {
@@ -66,6 +67,11 @@ body {
 #reasonsMaven {
   /* max-width: 745px !important;
   max-height: 517px; */
+}
+
+/* Our Courses section */
+.our-courses-section {
+  background-color: rgba(91, 157, 227, 0.08);
 }
 
 footer {

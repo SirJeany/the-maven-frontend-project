@@ -60,7 +60,7 @@
 
 
   h2 {
-    font-family: Titillium;
+    font-family: 'Titillium Web', Titillium , sans-serifs;
     font-size: 36px;
     font-weight: normal;
     font-stretch: normal;
@@ -70,7 +70,7 @@
     color: #030303;
   }
   .B3 {
-    font-family: Titillium;
+    font-family: 'Titillium Web', Titillium , sans-serif;
     font-size: 22px;
     font-weight: normal;
     font-stretch: normal;
@@ -80,7 +80,7 @@
     color: #ffffff;
   }
   .Lead-centre {
-    font-family: Titillium;
+    font-family: 'Titillium Web', Titillium , sans-serif;
     font-size: 16px;
     font-weight: 600;
     font-stretch: normal;
@@ -91,7 +91,7 @@
     color: #030303;
   }
   .button-style {
-    font-family: Titillium;
+    font-family: 'Titillium Web', Titillium , sans-serif;
     font-size: 16px;
     font-weight: 600;
     font-stretch: normal;
@@ -103,7 +103,7 @@
   }
 
   .Body-sml {
-    font-family: Titillium;
+    font-family: 'Titillium Web', Titillium , sans-serif;
     font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
@@ -117,7 +117,7 @@
   #subHeadingText {
     width: 882px;
     height: 78px;
-    font-family: Titillium;
+    font-family: 'Titillium Web', Titillium , sans-serif;
     font-size: 18px;
     font-weight: 600;
     font-stretch: normal;
@@ -128,3 +128,38 @@
     /* color: var(--charcoal-grey); */
     color: rgb(56, 54, 54);
   }
+
+.courses-title {
+  font-family: 'Titillium Web', Titillium , sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(56, 54, 54);
+}
+
+.why-maven-academy {
+  font-family: 'Titillium Web', Titillium , sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.immersive-training-p {
+  font-family: 'Titillium Web', Titillium , sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4f5559;
+}
