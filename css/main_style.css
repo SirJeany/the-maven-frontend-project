@@ -75,7 +75,7 @@ body {
 }
 
 .card {
-  width: 20px;
+  min-width: 100px;
 }
 
 /* Career services section */
