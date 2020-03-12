@@ -17,6 +17,8 @@ body {
   height: 364px;
 }
 
+/* Middle Area  */
+/* Left middle area */
 #mid {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -24,6 +26,25 @@ body {
 
 .why-maven-content {
   max-width: 514px;
+}
+
+/* Right Middle Area */
+
+.aside-reason-imgs {
+  width: 75px;
+  height: 75px;
+  background-color: #5b9de3;
+  border-radius: .5rem;
+}
+
+.reason-aside-heading-text {
+  line-height: 24px;
+  font-size: 22px;
+}
+
+.reason-aside-body-text {
+  line-height: 18px;
+  font-size: 16px;
 }
 
 #whyMaven {
