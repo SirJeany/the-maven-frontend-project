@@ -7,6 +7,7 @@ body {
   padding: 0;
 }
 
+/* Top Area: */
 #top {
   background-color: rgba(91, 157, 227, 0.08);
   padding-bottom: 40px;
@@ -15,6 +16,11 @@ body {
 #topImg {
   width: 514px;
   height: 364px;
+}
+
+/* Heading text (effects in js): */
+.typewrite {
+  height: 100px;
 }
 
 /* Middle Area  */
