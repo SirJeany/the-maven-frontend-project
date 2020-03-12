@@ -75,7 +75,7 @@ body {
 }
 
 .card {
-  width: 200px !important;
+  width: 20px !important;
 }
 
 /* Career services section */
@@ -87,6 +87,12 @@ body {
 
 }
 
+/* What students think section: */
+.students-think-section {
+  background-color: #36414c;
+}
+
+/* Footer: */
 footer {
   height: 20rem;
   background-color: #36414c;
