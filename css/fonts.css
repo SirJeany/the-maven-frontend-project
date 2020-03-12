@@ -19,10 +19,10 @@
     font-stretch: normal;
   } */
 
-  @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap');
 
   .top-nav {
-    font-family: 'Titillium Web', Titillium , sans-serif;
+    font-family: 'Titillium Web Semi-bold', Titillium , sans-serif;
     font-size: 1rem;
     font-weight: 600;
     font-stretch: normal;

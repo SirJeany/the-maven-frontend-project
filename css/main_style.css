@@ -74,6 +74,19 @@ body {
   background-color: rgba(91, 157, 227, 0.08);
 }
 
+.card {
+  width: 200px !important;
+}
+
+/* Career services section */
+#zondoLogo {
+  height: 80px;
+}
+
+.career-find-out-more-btn {
+
+}
+
 footer {
   height: 20rem;
   background-color: #36414c;
