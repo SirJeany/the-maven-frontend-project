@@ -79,7 +79,7 @@ body {
   border-color: #5b9de3;
   border-radius: 2rem;
   padding: 0.6rem 1.5rem 0.6rem 1.5rem;
-  box-shadow: ;
+  box-shadow: 0;
 }
 
 .career-find-out-more-btn:hover {
