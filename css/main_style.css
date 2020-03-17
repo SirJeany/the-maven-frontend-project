@@ -118,3 +118,10 @@ footer {
   /* padding: 2rem; */
   float: left;
 }
+
+
+@media all and (max-width: 540px) {
+  #student-think-img {
+    display: none;
+  }
+}
