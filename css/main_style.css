@@ -26,12 +26,16 @@ body {
 /* Middle Area  */
 /* Left middle area - Why Maven*/
 #midWhyMavenSection {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  /* margin-top: 40px;
+  margin-bottom: 40px; */
+}
+
+#whyMaven {
+  
 }
 
 .why-maven-content {
-  max-width: 514px;
+  /* max-width: 514px; */
 }
 
 /* Right Middle Area - Reasons Maven */
