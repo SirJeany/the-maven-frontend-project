@@ -120,9 +120,13 @@ footer {
   float: left;
 }
 
-
+/* All images to be removed: */
 @media all and (max-width: 540px) {
   #student-think-img {
+    display: none;
+  }
+
+  #topImg {
     display: none;
   }
 }
