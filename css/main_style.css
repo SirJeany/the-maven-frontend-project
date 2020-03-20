@@ -134,7 +134,7 @@ footer {
 
 /* All images to be removed: */
 @media all and (max-width: 540px) {
-  #student-think-img {
+  #studentThinkImg {
     display: none;
   }
 
