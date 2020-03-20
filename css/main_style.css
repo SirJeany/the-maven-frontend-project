@@ -110,6 +110,10 @@ body {
   margin-bottom: 60px; */
 }
 
+.name-link {
+  margin-left: -13px;
+}
+
 /* Thanks for enquiry section: */
 #thanks-img {
   width: 400px;
