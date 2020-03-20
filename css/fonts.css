@@ -21,6 +21,10 @@
 
   @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap');
 
+  :root {
+    --charcoal-grey: #343d42;
+  }
+
   .top-nav {
     font-family: 'Titillium Web Semi-bold', Titillium , sans-serif;
     font-size: 1rem;
