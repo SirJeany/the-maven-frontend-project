@@ -114,7 +114,7 @@ body {
 }
 
 /* Thanks for enquiry section: */
-#thanks-img {
+#thanksImg {
   width: 400px;
 }
 
@@ -143,6 +143,10 @@ footer {
   }
 
   .aside-reason-imgs {
+    display: none;
+  }
+
+  #thanksImg {
     display: none;
   }
 }
