@@ -73,7 +73,12 @@ body {
   background-color: rgba(91, 157, 227, 0.08);
 }
 
+#ourCoursesContainer {
+  padding: 40px 30px 20px 30px;
+}
+
 .card {
+  width: 372px;
   min-width: 100px;
 }
 
