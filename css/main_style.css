@@ -73,11 +73,21 @@ body {
   background-color: rgba(91, 157, 227, 0.08);
 }
 
+#ourCoursesContainer {
+  padding: 40px 30px 20px 30px;
+}
+
 .card {
+  /* width: 372px; */
   min-width: 100px;
 }
 
 /* Career services section */
+#careerServicesSection {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 #zondoLogo {
   height: 30px;
 }
