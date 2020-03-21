@@ -78,6 +78,11 @@ body {
 }
 
 /* Career services section */
+#careerServicesSection {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 #zondoLogo {
   height: 30px;
 }
