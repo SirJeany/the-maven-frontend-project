@@ -125,11 +125,15 @@ footer {
 }
 
 .footer-nav-general {
-
+  margin-top: 30px;
   /* width: 0; */
-  margin: 1rem 12.5% 2rem 12.5%;
+  /* margin: 1rem 12.5% 2rem 12.5%; */
   /* padding: 2rem; */
-  float: left;
+  /* float: left; */
+}
+
+.title-bottom-nav {
+  /* margin: 4rem; */
 }
 
 /* All images to be removed: */

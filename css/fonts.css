@@ -40,13 +40,14 @@
 
   .title-bottom-nav {
     font-family: 'Titillium Web', Titillium , sans-serif;
-    font-size: 1rem;
+    font-size: .7rem;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
     line-height: 4rem;
     letter-spacing: normal;
     color: #459de9;
+    text-decoration: none;
     /* padding: 2rem; */
   }
 
@@ -59,7 +60,7 @@
     line-height: 50%;
     letter-spacing: normal;
     color: white;
-    /* padding: 2rem; */
+    padding-top: .8rem;
   }
 
 
