@@ -15,39 +15,42 @@
 </head>
 <body>
     <!-- Nav bar: -->
-    <header role="navigation" class="navbar navbar-expand-sm d-flex  bg-dark header-main-nav">
-        <!-- Banner icon: -->
-        <div class="maven-img navbar-brand">
-            <img src="/assets/images/maven_academy_logo.png" alt="">
-        </div>
-        <!-- Toggle on collapse button: -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <!-- Rest of nav: -->
-        <div style="width: 100%;" class="nav-bar d-flex justify-content-end">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link ml-2 text-light">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link ml-2 text-light">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link ml-2 text-light">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link ml-2 text-light">Cart</a>
-                </li>
-                <li class="navbar-brand">
-                    <a href="#" class="nav-link ml-2 text-light"><i class="fas fa-shopping-basket"></i></a>
-                </li>
-                <!-- SVG Test:
-                <li class="navbar-brand">
-                    <a href="#" class="nav-link ml-2"><img src="/assets/images/app-summary-icon.svg" alt=""></a>
-                </li> -->
-            </ul>
-        </div>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark header-main-nav">
+            <!-- Banner icon: -->
+            <div class="maven-img navbar-brand">
+                <img src="/assets/images/maven_academy_logo.png" alt="">
+            </div>
+            <!-- Toggle on collapse button: -->
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTopNav" aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Rest of nav: -->
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarTopNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link ml-2 text-light">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ml-2 text-light">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ml-2 text-light">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ml-2 text-light">Cart</a>
+                    </li>
+                    <li class="navbar-brand">
+                        <a href="#" class="nav-link ml-2 text-light"><i class="fas fa-shopping-basket"></i></a>
+                    </li>
+                    <!-- SVG Test:
+                    <li class="navbar-brand">
+                        <a href="#" class="nav-link ml-2"><img src="/assets/images/app-summary-icon.svg" alt=""></a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <!-- Main section: -->
