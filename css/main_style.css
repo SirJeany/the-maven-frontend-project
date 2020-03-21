@@ -120,8 +120,9 @@ body {
 
 /* Footer: */
 footer {
-  height: 20rem;
+  /* height: 20rem; */
   background-color: #36414c;
+  padding-bottom: 50px;
 }
 
 .footer-nav-general {
