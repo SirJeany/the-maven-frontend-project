@@ -47,8 +47,11 @@
     line-height: 4rem;
     letter-spacing: normal;
     color: #459de9;
-    text-decoration: none;
     /* padding: 2rem; */
+  }
+
+  .title-bottom-nav:hover {
+    text-decoration: none;
   }
 
   .bottom-nav {
