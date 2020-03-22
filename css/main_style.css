@@ -129,7 +129,7 @@ body {
 }
 
 /* Footer: */
-footer {
+#footer {
   /* height: 20rem; */
   background-color: #36414c;
   padding-bottom: 50px;
@@ -147,8 +147,10 @@ footer {
   /* margin: 4rem; */
 }
 
+/* Bottom most footer: */
 #bottomBlackFooter{
   background-color: #1F262D;
+  padding: 20px;
 }
 
 /* All images to be removed: */
