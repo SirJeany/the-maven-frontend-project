@@ -147,6 +147,10 @@ footer {
   /* margin: 4rem; */
 }
 
+#bottomBlackFooter{
+  background-color: #1F262D;
+}
+
 /* All images to be removed: */
 @media all and (max-width: 540px) {
   #studentThinkImg {
