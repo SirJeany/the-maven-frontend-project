@@ -150,7 +150,11 @@ body {
 /* Bottom most footer: */
 #bottomBlackFooter{
   background-color: #1F262D;
-  padding: 20px;
+  padding: 40px;
+}
+
+#rightsReserved {
+  margin: 0;
 }
 
 /* All images to be removed: */
