@@ -7,8 +7,57 @@
 
     <!-- Own css: -->
     <link rel="stylesheet" href="/css/cart_style.css">
+
+    <!-- Bootstrap link:  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Jquery: -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    
+    <!-- Font awesome icons: -->
+    <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Nav bar: -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark header-main-nav">
+            <!-- Banner icon: -->
+            <div class="maven-img navbar-brand">
+                <img src="/assets/images/maven_academy_logo.png" alt="">
+            </div>
+            <!-- Toggle on collapse button: -->
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTopNav" aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            
+            <!-- Rest of nav: -->
+            <div class="collapse navbar-collapse" id="navbarTopNav">
+                <div class="d-flex justify-content-end ml-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="/index.html" class="nav-link ml-2 text-light">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ml-2 text-light">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ml-2 text-light">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/cart.html" class="nav-link ml-2 text-light">Cart</a>
+                        </li>
+                        <li class="navbar-brand">
+                            <a href="#" class="nav-link ml-2 text-light"><i class="fas fa-shopping-basket"></i></a>
+                        </li>
+                        <!-- SVG Test:
+                        <li class="navbar-brand">
+                            <a href="#" class="nav-link ml-2"><img src="/assets/images/app-summary-icon.svg" alt=""></a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     
 </body>
 </html>
