@@ -1,6 +1,7 @@
 :root {
   font-size: 16px;
   --charcoal-grey: #343d42;
+  --dark-sky-blue: #5b9de3;
 }
 
 body {
@@ -12,10 +13,17 @@ body {
 button {
   padding: 10px 70px 10px 70px;
   border: #5b9de3;
+  color: var(--dark-sky-blue);
   border-style: solid;
   border-width: 2px;
   border-radius: 30px !important;
   text-overflow: clip;
+  background-color: inherit;
+}
+
+button:hover {
+  background-color: #5b9de3;
+  color: var(--charcoal-grey);
 }
 
 /* Top Area: */
