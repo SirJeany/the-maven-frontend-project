@@ -122,6 +122,11 @@ button:hover {
   min-width: 100px;
 }
 
+.course-buttons {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
 /* Career services section */
 #careerServicesSection {
   margin-top: 40px;
