@@ -128,6 +128,20 @@ body {
   width: 400px;
 }
 
+.faq-a {
+  text-decoration-line: underline;
+  font-weight: normal;
+  color: #60a0e3;
+}
+.faq-a:hover {
+  text-decoration: none;
+  color: #60a0e3;
+}
+
+.thanks-contact-faq-num {
+  color: #60a0e3;
+}
+
 /* Footer: */
 #footer {
   /* height: 20rem; */
