@@ -65,6 +65,19 @@ button:hover {
   /* max-width: 514px; */
 }
 
+#readMoreBtn {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center; 
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 /* Right Middle Area - Reasons Maven */
 
 .aside-divs {
