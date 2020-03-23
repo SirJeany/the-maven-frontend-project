@@ -1,0 +1,10 @@
+:root {
+  font-size: 16px;
+  --charcoal-grey: #343d42;
+  --dark-sky-blue: #5b9de3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
