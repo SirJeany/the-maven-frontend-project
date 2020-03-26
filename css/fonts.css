@@ -25,6 +25,10 @@
     --charcoal-grey: #343d42;
   }
 
+  body {
+    font-family: 'Titillium Web', Titillium , sans-serif;
+  }
+
   .top-nav {
     font-family: 'Titillium Web Semi-bold', Titillium , sans-serif;
     font-size: 1rem;
