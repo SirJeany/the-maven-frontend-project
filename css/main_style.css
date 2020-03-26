@@ -9,6 +9,14 @@ body {
   padding: 0;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /* NAV BAR */
 #badge {
   border-radius: 50%;
@@ -25,6 +33,14 @@ body {
 /* Dropdown menu for cart icon: */
 .dropdown-menu {
   margin-top: 14px !important;
+}
+
+.remove-from-cart-btn {
+  opacity: 0.2;
+}
+
+.remove-from-cart-btn:hover {
+  opacity: 0.8;
 }
 
 /* All buttons: */
