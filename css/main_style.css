@@ -9,6 +9,19 @@ body {
   padding: 0;
 }
 
+/* NAV BAR */
+#badge {
+  border-radius: 50%;
+  font-size: x-small;
+  position: absolute;
+}
+
+#cartDiv {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
 /* All buttons: */
 button {
   padding: 10px 70px 10px 70px;
