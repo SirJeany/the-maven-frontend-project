@@ -166,8 +166,7 @@ button:hover {
 }
 
 .course-buttons {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 10px 0px 10px 0px;
 }
 
 /* Career services section */
