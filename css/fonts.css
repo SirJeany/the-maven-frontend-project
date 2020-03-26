@@ -66,6 +66,19 @@
     padding-top: .8rem;
   }
 
+  /* CART FONTS */
+  .cart-font {
+    font-family: 'Titillium Web', Titillium , sans-serif;
+  }
+  .cart-title-font {
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
   #findOutMoreBtn{
     font-family: 'Titillium Web', Titillium , sans-serif;
     font-size: 18px;
