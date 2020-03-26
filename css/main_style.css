@@ -35,6 +35,15 @@ body {
   margin-top: 14px !important;
 }
 
+.dropdown-item:hover {
+  background-color: inherit !important;
+}
+
+.dropdown-item:active {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
 .remove-from-cart-btn {
   opacity: 0.2;
 }
