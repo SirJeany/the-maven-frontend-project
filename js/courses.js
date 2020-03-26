@@ -75,7 +75,20 @@ function addCourseToCart(course) {
     flexContainer.appendChild(textContainer);
 
     let courseNameP = document.createElement('p'); // Heading part 'Become a Fullstack/webdev' ...
-    courseNameP.classList.add('text-primary', 'course-name-p');
+    courseNameP.classList.add('cart-course-text', 'course-name-p');
     courseNameP.textContent = 'Become a ' + course.title;
     textContainer.appendChild(courseNameP);
+
+    let courseInfoS = document.createElement('small'); // Course duration and position
+    courseInfoS.classList.add('cart-course-text', 'd-block');
+    courseInfoS.textContent = course.duration + ' - ' + course.distance;
+    textContainer.appendChild(courseInfoS);
+
+    let courseCost = document.createElement('small'); // Course Cost
+    courseCost.classList.add('cart-course-text', 'd-block');
+    courseCost.textContent = 'R' + course.price + ' Excl Vat';
+    textContainer.appendChild(courseCost);
+
+
+    // ToDo: Append 'view basket':
 }
