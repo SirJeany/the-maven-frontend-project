@@ -48,9 +48,18 @@
                         <li class="nav-item">
                             <a href="/pages/cart.html" class="nav-link ml-2 text-light">Cart</a>
                         </li>
+                        <!-- Cart icon and associative dropdown functionality: -->
                         <li class="navbar-brand">
+                            <!-- Icon and badge -->
                             <div id="cartDiv" class="bg-light text-center dropdown">
-                                <a href="#" id="dropdownMenu" class="text-dark align-middle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><i class="fas fa-shopping-basket"></i><span id="badge" class="badge badge-light">4</span></a>
+                                <a type="button" id="dropdownMenu" class="text-dark align-middle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><i class="fas fa-shopping-basket"></i><span id="badge" class="badge badge-light">4</span></a>
+                                <!-- Dropdown menu: -->
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu">
+                                    <div id="coursesContainer" class="container">
+                                        <a id="closeCartBtn"><i class="far fa-times-circle row float-right mr-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <!-- SVG Test:
                         <li class="navbar-brand">

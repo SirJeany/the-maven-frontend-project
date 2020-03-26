@@ -22,6 +22,11 @@ body {
   width: 40px;
 }
 
+/* Dropdown menu for cart icon: */
+.dropdown-menu {
+  margin-top: 14px !important;
+}
+
 /* All buttons: */
 button {
   padding: 10px 70px 10px 70px;
