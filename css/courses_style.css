@@ -4,13 +4,13 @@
   font-size: 16px;
   --charcoal-grey: #343d42;
   --dark-sky-blue: #5b9de3;
-  --font-family: 'Titillium Web Semi-bold', Titillium , sans-serif;
+  --font-family: 'Titillium Web', Titillium , sans-serif;
 }
   
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Titillium Web Semi-bold', Titillium , sans-serif !important;
+  font-family: var(--font-family) !important;
 }
 
 /* TABLE */
