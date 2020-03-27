@@ -35,6 +35,23 @@ body {
   /* padding: 40px !important; */
 }
 
+/* BUTTONS */
+button {
+  padding: 10px 70px 10px 70px;
+  border: #5b9de3;
+  color: var(--dark-sky-blue);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 30px !important;
+  white-space: nowrap; /* Stops text from wrapping */
+  background-color: inherit;
+}
+
+button:hover {
+  background-color: #5b9de3;
+  color: var(--charcoal-grey);
+}
+
 /* FONTS */
 
 body {
