@@ -86,10 +86,16 @@ let cart = [];
 // Note:
 // 1) Buttons have an inline 'onclick' call that allows their respective events to fire.
 
+// The carts:
+const coursesContainer = document.getElementById('coursesContainer');
+const stickyCart = document.getElementById('stickyCart');
+
+let fragment = document.createDocumentFragment(); // Fragment to be cloned. Holds all things until we add the contents to the individual carts.
+
 function addCourseToCart(course) {
     let dropdownContainer = document.createElement('div');
     dropdownContainer.classList.add('dropdown-item');
-    coursesContainer.appendChild(dropdownContainer); // Put the container in the cart.
+    fragment.appendChild(dropdownContainer); // Use the fragment to add courses to cart
     
     let flexContainer = document.createElement('div'); // Flex container wrapper
     flexContainer.classList.add('d-flex');
@@ -135,5 +141,11 @@ function addCourseToCart(course) {
     textContainer.appendChild(courseCost);
 
 
-    // ToDo: Append 'view basket':
+    // ToDo: Append 'view basket'
+
+
+    //Stitch them together:
+    let fragClone = fragment.cloneNode(true); //Create the clone
+    coursesContainer.appendChild(fragment); // Put the container in the cart.
+    stickyCart.appendChild(fragClone); // Put course in sticky cart as well.
 }
