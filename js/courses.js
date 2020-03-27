@@ -1,14 +1,58 @@
-// This file contains all the content for courses which will be available at MessageEvent. 
-
+// This file contains all the content for courses and related events. 
 'use strict';
 
+// First a JSON object that holds all course details:
+const allCourses = [
+    {
+        "title": "Full Stack Web Developer",
+        "duration": "12 Week Course",
+        "distance": "In Class",
+        "images": [{
+            "small": "/assets/images/full-stack-banner.png",
+            "medium": "/assets/images/full-stack-banner@2x.png",
+            "large": "/assets/images/full-stack-banner@3x.png"
+        }],
+        "price": 26000,
+        "course-outline": [{
+            "pre-work": "This is the pre-work for the Fullstack course",
+            "module1": "This is the outline for the first module",
+            "module2": "This is the outline for the second module",
+            "module3": "This is the outline for the third module",
+            "module4": "This is the outline for the fourth module",
+            "master-class": "These are the master class electives for the fullstack course"
+        }]
+    },
+
+    {
+        "title": "Front End Web Developer",
+        "duration": "4 Week Course",
+        "distance": "In Class",
+        "images": [{
+            "small": "/assets/images/frontend-dev.png",
+            "medium": "/assets/images/frontend-dev@2x.png",
+            "large": "/assets/images/frontend-dev@3x.png"
+        }],
+        "price": 18000,
+        "course-outline": [{
+            "pre-work": "This is the pre-work for the Front End Webdev course",
+            "module1": "This is the outline for the first module",
+            "module2": "This is the outline for the second module",
+            "module3": "This is the outline for the third module",
+            "module4": "This is the outline for the fourth module",
+            "master-class": "These are the master class electives for the Web Dev course"
+        }]
+    }
+
+]
+
 // Courses class:
-function Course(title, duration, distance, image, price) {
+function Course(title, duration, distance, image, price, courseOutline) {
     this.title = title;
     this.duration = duration;
     this.distance = distance;
     this.image = image;
     this.price = price;
+    this.courseOutline = courseOutline;
 }
 
 // Courses prototypes:
@@ -28,6 +72,7 @@ Course.prototype.removeFromCart = function() {
 }
 
 // Some courses:
+
 let fullStackWebDev = new Course('Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
 let frontEndWebDev = new Course('Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
 
