@@ -143,6 +143,9 @@ function addCourseToCart(course) {
 
     // ToDo: Append 'view basket'
 
+    //Edit badge:
+    document.getElementById('badge').innerHTML = cart.length;
+    document.getElementById('stickyBadge').innerHTML = cart.length;
 
     //Stitch them together:
     let fragClone = fragment.cloneNode(true); //Create the clone
