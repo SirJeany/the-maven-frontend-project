@@ -82,6 +82,7 @@ let cart = [];
 
 // CODE TO POPULATE COURSES ON PAGE:
 
+
 // CODE TO ADD COURSES TO CART:
 // Note:
 // 1) Buttons have an inline 'onclick' call that allows their respective events to fire.
