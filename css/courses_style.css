@@ -41,6 +41,13 @@ body {
   /* padding: 40px !important; */
 }
 
+/* CURRICULUM */
+#bachelorIcon {
+  background-color: var(--dark-sky-blue);
+  border-radius: 7px;
+  padding: 14px;
+}
+
 /* BUTTONS */
 button {
   padding: 10px 70px 10px 70px;
@@ -56,6 +63,12 @@ button {
 button:hover {
   background-color: #5b9de3;
   color: var(--charcoal-grey);
+}
+
+/* LINKS */
+
+a {
+  color: var(--dark-sky-blue) !important;
 }
 
 /* FONTS */
