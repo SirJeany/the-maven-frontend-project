@@ -12,7 +12,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family) !important;
 }
 
 /* TABLE */
@@ -38,3 +37,20 @@ body {
 
 /* FONTS */
 
+body {
+  font-family: var(--font-family) !important;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.tab-content {
+  line-height: 2.19;
+}
+
+.tab-content-title {
+  font-size: 22px;
+  font-weight: bold;
+}
