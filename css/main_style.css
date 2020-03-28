@@ -287,4 +287,12 @@ button:hover {
   #thanksImg {
     display: none;
   }
+
+  
+}
+
+@media all and (max-width: 720px) {
+  .dropdown-menu {
+      display: none !important;
+  }
 }
