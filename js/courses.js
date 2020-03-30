@@ -4,6 +4,7 @@
 // First a JSON object that holds all course details:
 const allCourses = [
     {
+        "courseID": "001",
         "title": "Full Stack Web Developer",
         "duration": "12 Week Course",
         "distance": "In Class",
@@ -24,6 +25,7 @@ const allCourses = [
     },
 
     {
+        "courseID": "002",
         "title": "Front End Web Developer",
         "duration": "4 Week Course",
         "distance": "In Class",
@@ -56,11 +58,32 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
     this.courseOutline = courseOutline;
 }
 
-// COOKIES:
-// let cookies = document.cookie;
-//Clear cookies at start of site:
-document.cookie = '001=;';
-document.cookie = '002=;';
+
+
+// POPULATE THE CART: 
+// to be done on each page load.
+function loadCart() {
+    document.cookie.split(';').forEach(cookie => {
+        let id = cookie.split('=')[0].trim();
+        let course = cookie.split('=')[1].trim();
+        
+        if(course){
+            console.log(id);
+            switch( id ){
+                case "001": console.log('adding ' + course + ' to cart');
+                            cart.push(fullStackWebDev);
+                            addCourseToCart(fullStackWebDev);
+                    break;
+                case "002": console.log('adding ' + course + ' to cart');
+                            cart.push(frontEndWebDev);
+                            addCourseToCart(frontEndWebDev);
+                    break;
+            }
+        } else {
+            console.log('nothing')
+        }
+    });
+}
 
 // COURSE PROTOTYPES:
 
@@ -71,7 +94,7 @@ Course.prototype.addToCart = function() {
         cart.push(this);
         addCourseToCart(this);
     }
-    
+    console.log('cart after adding course:');
     console.log(cart);
 }
 
@@ -91,6 +114,7 @@ let frontEndWebDev = new Course('002','Front End Web Developer', '4 Week Course'
 let cart = [];
 
 // CODE TO POPULATE COURSES ON PAGE:
+
 
 
 // CODE TO ADD COURSES TO CART:
@@ -164,6 +188,12 @@ function addCourseToCart(course) {
     stickyCart.appendChild(fragClone); // Put course in sticky cart as well.
 }
 
+
+// COOKIES:
+// let cookies = document.cookie;
+//Clear cookies at start of site:
+// document.cookie = '001=;';
+// document.cookie = '002=;';
 
 // CODE FOR COOKIES:
 // @Program: Function to add a course to the cookies.
