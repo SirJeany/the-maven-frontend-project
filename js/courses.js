@@ -115,7 +115,11 @@ let cart = [];
 
 // CODE TO POPULATE COURSES ON PAGE:
 
+function populateOurCourses() {
+    cart.forEach(course => {
 
+    });
+}
 
 // CODE TO ADD COURSES TO CART:
 // Note:
