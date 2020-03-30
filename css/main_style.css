@@ -2,6 +2,7 @@
   font-size: 16px;
   --charcoal-grey: #343d42;
   --dark-sky-blue: #5b9de3;
+  --dark-sky-blue-8: rgba(91, 157, 227, 0.08);
 }
 
 body {
@@ -163,7 +164,7 @@ button:hover {
 }
 
 
-/* Our Courses section */
+/* OUR COURSES section */
 #ourCoursesSection {
   background-color: rgba(91, 157, 227, 0.08);
 }
@@ -175,6 +176,13 @@ button:hover {
 .card {
   /* width: 372px; */
   min-width: 100px;
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  /* border-radius: 10px; */
+  box-shadow: 10px 10px 5px var(--dark-sky-blue-8);
 }
 
 .course-buttons {

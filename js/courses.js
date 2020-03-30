@@ -109,15 +109,15 @@ Course.prototype.removeFromCart = function() {
 let fullStackWebDev = new Course('001','Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
 let frontEndWebDev = new Course('002','Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
 
-// Cart:
+// CART:
 // Contains all courses that the user wishes to buy.
 let cart = [];
 
 // CODE TO POPULATE COURSES ON PAGE:
 
 function populateOurCourses() {
-    cart.forEach(course => {
-
+    allCourses.forEach(course => {
+        
     });
 }
 
