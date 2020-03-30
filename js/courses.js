@@ -46,7 +46,8 @@ const allCourses = [
 ]
 
 // Courses class:
-function Course(title, duration, distance, image, price, courseOutline) {
+function Course(courseID, title, duration, distance, image, price, courseOutline) {
+    this.courseID = courseID;
     this.title = title;
     this.duration = duration;
     this.distance = distance;
@@ -55,13 +56,22 @@ function Course(title, duration, distance, image, price, courseOutline) {
     this.courseOutline = courseOutline;
 }
 
-// Courses prototypes:
+// COOKIES:
+// let cookies = document.cookie;
+//Clear cookies at start of site:
+document.cookie = '001=;';
+document.cookie = '002=;';
+
+// COURSE PROTOTYPES:
 
 // Function to add course to cart:
 Course.prototype.addToCart = function() {
-    // ToDo: Add check to see if the course is already in the cart (surely we only want one course per type for now?) - Implement Promise?
-    cart.push(this);
-    addCourseToCart(this);
+    let check = addToCookies(this);
+    if(check) {
+        cart.push(this);
+        addCourseToCart(this);
+    }
+    
     console.log(cart);
 }
 
@@ -73,8 +83,8 @@ Course.prototype.removeFromCart = function() {
 
 // Some courses:
 
-let fullStackWebDev = new Course('Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
-let frontEndWebDev = new Course('Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
+let fullStackWebDev = new Course('001','Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
+let frontEndWebDev = new Course('002','Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
 
 // Cart:
 // Contains all courses that the user wishes to buy.
@@ -152,4 +162,23 @@ function addCourseToCart(course) {
     let fragClone = fragment.cloneNode(true); //Create the clone
     coursesContainer.appendChild(fragment); // Put the container in the cart.
     stickyCart.appendChild(fragClone); // Put course in sticky cart as well.
+}
+
+
+// CODE FOR COOKIES:
+// @Program: Function to add a course to the cookies.
+// @return: returns false if the course was already present. True of the course was added.
+function addToCookies(course) {
+    //Check of cookie exists:
+    let check = document.cookie.split(';').filter(item => {
+        return item.indexOf(course.courseID + '=' + course.title) >= 0
+    }).length;
+
+    if(check){
+        return false;
+    }
+
+    document.cookie = course.courseID + '=' + course.title + ';';
+
+    return true;
 }
