@@ -8,6 +8,7 @@
     <!-- Own css: -->
     <link rel="stylesheet" href="/css/cart_style.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/brand-carousel.css">
 
     <!-- Bootstrap link:  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -62,7 +63,16 @@
     
     <main>
         <section class="container text-center mt-5">
-            <div id="cardsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <section id="cardsContainer" class="customer-logos slider">
+                <div class="slide">
+                    <img src="/assets/images/companies-logo/logo-associated-media.png">
+                </div>
+                <div class="slide">
+                    <img src="/assets/images/companies-logo/logo-associated-media.png">
+                </div>
+            </section>
+
+            <!-- <div id="cardsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 <div class="col mb-4">
                   <div class="card h-100">
                     <img src="https://place-hold.it/200x100&text=New%20Course" class="card-img-top" alt="...">
@@ -72,11 +82,16 @@
                     </div>
                   </div>
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
 
     <script src="/js/courses.js"></script>
+    <script src="/js/courses-carousel.js"></script>
+
+    <!-- Slick: -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script>
         let newCart = [
             {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
@@ -88,8 +103,8 @@
         const cardsContainer = document.getElementById('cardsContainer');
         function displayCards() {
             newCart.forEach(card => {
-                let newCol = document.createElement('div');
-                newCol.classList.add('col', 'mb-4');
+                let newSlide = document.createElement('div');
+                newSlide.classList.add('slide');
 
                 let newCard = document.createElement('div');
                 newCard.classList.add('card', 'h-100');
@@ -113,8 +128,8 @@
                 newText.innerText = card.text;
                 newBody.appendChild(newText);
 
-                newCol.appendChild(newCard);
-                cardsContainer.appendChild(newCol);
+                newSlide.appendChild(newCard);
+                cardsContainer.appendChild(newSlide);
             });
         }
 
