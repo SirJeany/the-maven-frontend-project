@@ -216,3 +216,9 @@ function addToCookies(course) {
 
     return true;
 }
+
+
+// FUNCTION TO LOAD COURSES ON CART PAGE:
+function displayCourses() {
+    
+}

@@ -61,11 +61,64 @@
     </header>
     
     <main>
-        <section class="container text-center">
-            <h1 class="display-1 mb-5">Site under construction</h1>
-            <i class="fas fa-hard-hat fa-w-16 fa-9x text-primary"></i>
+        <section class="container text-center mt-5">
+            <div id="cardsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col mb-4">
+                  <div class="card h-100">
+                    <img src="https://place-hold.it/200x100&text=New%20Course" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <script src="/js/courses.js"></script>
+    <script>
+        let newCart = [
+            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
+            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
+            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
+            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"}
+        ];
+
+        const cardsContainer = document.getElementById('cardsContainer');
+        function displayCards() {
+            newCart.forEach(card => {
+                let newCol = document.createElement('div');
+                newCol.classList.add('col', 'mb-4');
+
+                let newCard = document.createElement('div');
+                newCard.classList.add('card', 'h-100');
+
+                let newImg = document.createElement('img');
+                newImg.classList.add('card-img');
+                newImg.setAttribute('src', 'https://place-hold.it/200x100&text=New%20Course');
+                newCard.appendChild(newImg);
+
+                let newBody = document.createElement('div');
+                newBody.classList.add('card-body');
+                newCard.appendChild(newBody);
+
+                let newTitle = document.createElement('div');
+                newTitle.classList.add('card-title');
+                newTitle.innerText = card.title;
+                newBody.appendChild(newTitle);
+
+                let newText = document.createElement('div');
+                newText.classList.add('card-text');
+                newText.innerText = card.text;
+                newBody.appendChild(newText);
+
+                newCol.appendChild(newCard);
+                cardsContainer.appendChild(newCol);
+            });
+        }
+
+        displayCards();
+    </script>
 </body>
 </html>
