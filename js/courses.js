@@ -8,20 +8,20 @@ const allCourses = [
         "title": "Full Stack Web Developer",
         "duration": "12 Week Course",
         "distance": "In Class",
-        "images": [{
+        "images": {
             "small": "/assets/images/full-stack-banner.png",
             "medium": "/assets/images/full-stack-banner@2x.png",
             "large": "/assets/images/full-stack-banner@3x.png"
-        }],
+        },
         "price": 26000,
-        "course-outline": [{
+        "course-outline": {
             "pre-work": "This is the pre-work for the Fullstack course",
             "module1": "This is the outline for the first module",
             "module2": "This is the outline for the second module",
             "module3": "This is the outline for the third module",
             "module4": "This is the outline for the fourth module",
             "master-class": "These are the master class electives for the fullstack course"
-        }]
+        }
     },
 
     {
@@ -29,20 +29,20 @@ const allCourses = [
         "title": "Front End Web Developer",
         "duration": "4 Week Course",
         "distance": "In Class",
-        "images": [{
+        "images": {
             "small": "/assets/images/frontend-dev.png",
             "medium": "/assets/images/frontend-dev@2x.png",
             "large": "/assets/images/frontend-dev@3x.png"
-        }],
+        },
         "price": 18000,
-        "course-outline": [{
+        "course-outline": {
             "pre-work": "This is the pre-work for the Front End Webdev course",
             "module1": "This is the outline for the first module",
             "module2": "This is the outline for the second module",
             "module3": "This is the outline for the third module",
             "module4": "This is the outline for the fourth module",
             "master-class": "These are the master class electives for the Web Dev course"
-        }]
+        }
     }
 
 ]
@@ -219,6 +219,55 @@ function addToCookies(course) {
 
 
 // FUNCTION TO LOAD COURSES ON CART PAGE:
+const cardsContainer = document.getElementById('cardsContainer');
 function displayCourses() {
-    
+    allCourses.forEach(course => {
+        // console.log(course.images['small']);
+        let newSlide = document.createElement('div');
+        newSlide.classList.add('slide', 'pb-4', 'pt-4');
+
+        let newCard = document.createElement('div');
+        newCard.classList.add('card', 'h-100');
+
+        let newBody = document.createElement('div');
+        newBody.classList.add('card-body');
+
+        let cardTitle = document.createElement('div');
+        cardTitle.classList.add('card-title');
+        cardTitle.innerText = course.title;
+        newBody.appendChild(cardTitle);
+
+        let courseDuration = document.createElement('div');
+        courseDuration.classList.add('card-text');
+        courseDuration.innerHTML = `<span>${course.duration} - ${course.distance}</span>`;
+        newBody.appendChild(courseDuration); 
+
+        let courseImg = document.createElement('img');
+        courseImg.classList.add('card-img');
+        courseImg.setAttribute('src', course.images['small']);
+        newBody.appendChild(courseImg);
+
+        let coursePrice = document.createElement('div');
+        coursePrice.classList.add('card-text', 'text-center');
+        // let priceRegex = new RegExp(/\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})/);
+        // coursePrice.innerHTML = 'R' + course.price.toString().replace(priceRegex, course.price.toString());
+        coursePrice.innerHTML = 'R' + course.price.toString();
+        newBody.appendChild(coursePrice);
+
+        let courseDetail = document.createElement('div');
+        courseDetail.classList.add('card-text', 'text-center');
+        courseDetail.innerHTML = `<small><u><a>View course detail</a></u></small>`;
+        newBody.appendChild(courseDetail);
+
+        let courseBtn = document.createElement('div');
+        courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
+        courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>`;
+        newBody.appendChild(courseBtn);
+
+        // Stitch it all together:
+        newCard.appendChild(newBody);
+        newSlide.appendChild(newCard);
+        cardsContainer.appendChild(newSlide);
+    });
 }
+displayCourses(); //Give time to get cookies into cart
