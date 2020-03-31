@@ -227,14 +227,14 @@ function displayCourses() {
         newSlide.classList.add('slide', 'pb-4', 'pt-4');
 
         let newCard = document.createElement('div');
-        newCard.classList.add('card', 'h-100');
+        newCard.classList.add('card', 'h-100', 'p-3');
 
         let newBody = document.createElement('div');
         newBody.classList.add('card-body');
 
         let cardTitle = document.createElement('div');
-        cardTitle.classList.add('card-title');
-        cardTitle.innerText = course.title;
+        cardTitle.classList.add('card-title', 'text-blue-dodger');
+        cardTitle.innerHTML = `<strong>${course.title}</strong>`;
         newBody.appendChild(cardTitle);
 
         let courseDuration = document.createElement('div');
@@ -248,10 +248,9 @@ function displayCourses() {
         newBody.appendChild(courseImg);
 
         let coursePrice = document.createElement('div');
-        coursePrice.classList.add('card-text', 'text-center');
-        // let priceRegex = new RegExp(/\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})/);
-        // coursePrice.innerHTML = 'R' + course.price.toString().replace(priceRegex, course.price.toString());
-        coursePrice.innerHTML = 'R' + course.price.toString();
+        coursePrice.classList.add('card-text', 'text-center', 'text-blue-dodger');
+        let priceText = 'R' + course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
+        coursePrice.innerHTML = `<h5><strong>${priceText}</strong></h5>`;
         newBody.appendChild(coursePrice);
 
         let courseDetail = document.createElement('div');

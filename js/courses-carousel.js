@@ -8,19 +8,19 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
+        autoplaySpeed: 1000,
+        arrows: true,
         dots: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
         responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 900,
             settings: {
             slidesToShow: 2
             }
         },
         {
-            breakpoint: 520,
+            breakpoint: 560,
             settings: {
             slidesToShow: 1
             }
@@ -28,3 +28,7 @@ $(document).ready(function() {
         ]
     });
 });
+
+let carousel = document.querySelector('.course-cards-container')
+    .querySelectorAll('button.slick-arrow')
+    .forEach(arrow => arrow.classList.add('bg-dark'));

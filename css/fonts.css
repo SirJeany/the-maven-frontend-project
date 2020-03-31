@@ -24,10 +24,21 @@
   :root {
     --charcoal-grey: #343d42;
     --dark-sky-blue-two: #4a90e2;
+    --dodger-blue: #3398f2;
   }
 
   body {
     font-family: 'Titillium Web', Titillium , sans-serif !important;
+  }
+
+  .text-blue-sky {
+    color: var(--dark-sky-blue-two);
+  }
+  .text-blue-dodger {
+    color: var(--dodger-blue);
+  }
+  .text-grey {
+    color: var(--charcoal-grey);
   }
 
   .top-nav {
