@@ -20,12 +20,22 @@ body {
   transform: scaleX(-1);
 }
 
+/* CARD */
+
+.card-course-detail-a {
+  color: var(--charcoal-grey);
+}
+.card-course-detail-a:hover {
+  color: var(--charcoal-grey);
+}
+
 /* TABLE */
 
 .list-group-item { 
   border: 0 !important; /* remove borders on tab items */
   border: var(--dark-sky-blue);
-  color: var(--dark-sky-blue) !important;
+  color: var(--charcoal-grey);
+  font-weight: bolder;
 }
 
 .list-group-item.active {
