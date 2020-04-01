@@ -66,17 +66,17 @@ function loadCart() {
     document.cookie.split(';').forEach(cookie => {
         let id = cookie.split('=')[0].trim();
         let course = cookie.split('=')[1].trim();
-        
-        if(course){
+
+        if (course) {
             console.log(id);
-            switch( id ){
+            switch (id) {
                 case "001": console.log('adding ' + course + ' to cart');
-                            cart.push(fullStackWebDev);
-                            addCourseToCart(fullStackWebDev);
+                    cart.push(fullStackWebDev);
+                    addCourseToCart(fullStackWebDev);
                     break;
                 case "002": console.log('adding ' + course + ' to cart');
-                            cart.push(frontEndWebDev);
-                            addCourseToCart(frontEndWebDev);
+                    cart.push(frontEndWebDev);
+                    addCourseToCart(frontEndWebDev);
                     break;
             }
         } else {
@@ -88,9 +88,9 @@ function loadCart() {
 // COURSE PROTOTYPES:
 
 // Function to add course to cart:
-Course.prototype.addToCart = function() {
+Course.prototype.addToCart = function () {
     let check = addToCookies(this);
-    if(check) {
+    if (check) {
         cart.push(this);
         addCourseToCart(this);
     }
@@ -99,15 +99,15 @@ Course.prototype.addToCart = function() {
 }
 
 // Function to bin course from cart: 
-Course.prototype.removeFromCart = function() {
+Course.prototype.removeFromCart = function () {
     // Code to find the appropriate element in the array and remove it
     // cart.pop();
 }
 
 // Some courses:
 
-let fullStackWebDev = new Course('001','Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
-let frontEndWebDev = new Course('002','Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
+let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
+let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
 
 // CART:
 // Contains all courses that the user wishes to buy.
@@ -117,7 +117,7 @@ let cart = [];
 
 function populateOurCourses() {
     allCourses.forEach(course => {
-        
+
     });
 }
 
@@ -135,7 +135,7 @@ function addCourseToCart(course) {
     let dropdownContainer = document.createElement('div');
     dropdownContainer.classList.add('dropdown-item');
     fragment.appendChild(dropdownContainer); // Use the fragment to add courses to cart
-    
+
     let flexContainer = document.createElement('div'); // Flex container wrapper
     flexContainer.classList.add('d-flex');
     dropdownContainer.appendChild(flexContainer);
@@ -208,7 +208,7 @@ function addToCookies(course) {
         return item.indexOf(course.courseID + '=' + course.title) >= 0
     }).length;
 
-    if(check){
+    if (check) {
         return false;
     }
 
@@ -217,56 +217,117 @@ function addToCookies(course) {
     return true;
 }
 
+// GENERAL FUNCTION TO LOAD CARDS:
+function loadCard(course){
+    let newCard = document.createElement('div');
+    newCard.classList.add('card', 'h-100', 'p-3');
+
+    let newBody = document.createElement('div');
+    newBody.classList.add('card-body');
+
+    let cardTitle = document.createElement('div');
+    cardTitle.classList.add('card-title', 'text-blue-dodger');
+    cardTitle.innerHTML = `<strong>${course.title}</strong>`;
+    newBody.appendChild(cardTitle);
+
+    let courseDuration = document.createElement('div');
+    courseDuration.classList.add('card-text');
+    courseDuration.innerHTML = `<span>${course.duration} - ${course.distance}</span>`;
+    newBody.appendChild(courseDuration);
+
+    let courseImg = document.createElement('img');
+    courseImg.classList.add('card-img');
+    courseImg.setAttribute('src', course.images['small']);
+    newBody.appendChild(courseImg);
+
+    let coursePrice = document.createElement('div');
+    coursePrice.classList.add('card-text', 'text-center', 'text-blue-dodger');
+    let priceText = 'R' + course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
+    coursePrice.innerHTML = `<h5><strong>${priceText}</strong></h5>`;
+    newBody.appendChild(coursePrice);
+
+    let courseDetail = document.createElement('div');
+    courseDetail.classList.add('card-text', 'text-center');
+    courseDetail.innerHTML = `<small><u><a>View course detail</a></u></small>`;
+    newBody.appendChild(courseDetail);
+
+    let courseBtn = document.createElement('div');
+    courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
+    courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>`;
+    newBody.appendChild(courseBtn);
+
+    newCard.appendChild(newBody);
+
+    return newCard;
+}
 
 // FUNCTION TO LOAD COURSES ON CART PAGE:
-const cardsContainer = document.getElementById('cardsContainer');
-function displayCourses() {
+try {
+    const cardsContainer = document.getElementById('cardsContainer');
+    function displayCourses() {
+        allCourses.forEach(course => {
+            // console.log(course.images['small']);
+            let newSlide = document.createElement('div');
+            newSlide.classList.add('slide', 'pb-4', 'pt-4');
+
+            let newCard = document.createElement('div');
+            newCard.classList.add('card', 'h-100', 'p-3');
+
+            let newBody = document.createElement('div');
+            newBody.classList.add('card-body');
+
+            let cardTitle = document.createElement('div');
+            cardTitle.classList.add('card-title', 'text-blue-dodger');
+            cardTitle.innerHTML = `<strong>${course.title}</strong>`;
+            newBody.appendChild(cardTitle);
+
+            let courseDuration = document.createElement('div');
+            courseDuration.classList.add('card-text');
+            courseDuration.innerHTML = `<span>${course.duration} - ${course.distance}</span>`;
+            newBody.appendChild(courseDuration);
+
+            let courseImg = document.createElement('img');
+            courseImg.classList.add('card-img');
+            courseImg.setAttribute('src', course.images['small']);
+            newBody.appendChild(courseImg);
+
+            let coursePrice = document.createElement('div');
+            coursePrice.classList.add('card-text', 'text-center', 'text-blue-dodger');
+            let priceText = 'R' + course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
+            coursePrice.innerHTML = `<h5><strong>${priceText}</strong></h5>`;
+            newBody.appendChild(coursePrice);
+
+            let courseDetail = document.createElement('div');
+            courseDetail.classList.add('card-text', 'text-center');
+            courseDetail.innerHTML = `<small><u><a>View course detail</a></u></small>`;
+            newBody.appendChild(courseDetail);
+
+            let courseBtn = document.createElement('div');
+            courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
+            courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>`;
+            newBody.appendChild(courseBtn);
+
+            // Stitch it all together:
+            newCard.appendChild(newBody);
+            newSlide.appendChild(newCard);
+            cardsContainer.appendChild(newSlide);
+        });
+    }
+    displayCourses(); //Give time to get cookies into cart
+} catch (error) {
+    console.log('No course loader needed on this page');
+}
+
+// ALL COURSES LOADER:
+const allCoursesCardDeck = document.getElementById('allCoursesCardDeck');
+function loadCardDeck() {
     allCourses.forEach(course => {
-        // console.log(course.images['small']);
-        let newSlide = document.createElement('div');
-        newSlide.classList.add('slide', 'pb-4', 'pt-4');
+        let newCol = document.createElement('div');
+        newCol.classList.add('col', 'mb-4');
 
-        let newCard = document.createElement('div');
-        newCard.classList.add('card', 'h-100', 'p-3');
-
-        let newBody = document.createElement('div');
-        newBody.classList.add('card-body');
-
-        let cardTitle = document.createElement('div');
-        cardTitle.classList.add('card-title', 'text-blue-dodger');
-        cardTitle.innerHTML = `<strong>${course.title}</strong>`;
-        newBody.appendChild(cardTitle);
-
-        let courseDuration = document.createElement('div');
-        courseDuration.classList.add('card-text');
-        courseDuration.innerHTML = `<span>${course.duration} - ${course.distance}</span>`;
-        newBody.appendChild(courseDuration); 
-
-        let courseImg = document.createElement('img');
-        courseImg.classList.add('card-img');
-        courseImg.setAttribute('src', course.images['small']);
-        newBody.appendChild(courseImg);
-
-        let coursePrice = document.createElement('div');
-        coursePrice.classList.add('card-text', 'text-center', 'text-blue-dodger');
-        let priceText = 'R' + course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
-        coursePrice.innerHTML = `<h5><strong>${priceText}</strong></h5>`;
-        newBody.appendChild(coursePrice);
-
-        let courseDetail = document.createElement('div');
-        courseDetail.classList.add('card-text', 'text-center');
-        courseDetail.innerHTML = `<small><u><a>View course detail</a></u></small>`;
-        newBody.appendChild(courseDetail);
-
-        let courseBtn = document.createElement('div');
-        courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
-        courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>`;
-        newBody.appendChild(courseBtn);
-
-        // Stitch it all together:
-        newCard.appendChild(newBody);
-        newSlide.appendChild(newCard);
-        cardsContainer.appendChild(newSlide);
+        let newCard = loadCard(course);
+        
+        newCol.appendChild(newCard);
+        allCoursesCardDeck.appendChild(newCol);
     });
 }
-displayCourses(); //Give time to get cookies into cart
