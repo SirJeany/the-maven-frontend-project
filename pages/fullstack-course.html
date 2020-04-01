@@ -18,7 +18,7 @@
     <!-- Font awesome icons: -->
     <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
 </head>
-<body onload="loadSingleCourseCard(allCourses[0])">
+<body onload="loadSingleCourseCard(allCourses[0]), loadCourseOutline(allCourses[0])">
     <!-- Nav bar: -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark header-main-nav">
@@ -92,26 +92,26 @@
             <div class="row text-center">
               <h2 class="display-4">Course Outline</h2>
             </div>
-            <section class="container-fluid">
+            <section id="courseOutlineContainer" class="container-fluid">
                 <!-- TABS -->
               <div class="row">
                 <div class="list-group list-group list-group-horizontal-sm w-100 text-center" id="list-tab" role="tablist">
-                  <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+                  <!-- <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
                   <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
                   <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a> -->
                 </div>
               </div>
               <!-- TAB CONENTS -->
               <div class="row tabbed-content-container mt-5 p-5">
                 <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                  <!-- <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                       <h5 class="tab-content-title mb-5">Inherit Tab name</h5>
                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quaerat, laboriosam vel qui quos, praesentium rem eos maxime dolor facilis, accusantium autem recusandae! Ab sapiente adipisci sequi in maiores facilis.</p>
-                    </div>
+                  </div>
                   <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod debitis reprehenderit doloremque iste deleniti officia aliquam, odit porro perferendis, recusandae quam earum blanditiis quia. Maiores esse debitis provident eos?</div>
                   <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vel consequatur quisquam voluptate modi optio omnis rerum voluptates earum soluta laboriosam itaque ut labore error repellendus deserunt, iusto ducimus numquam.</div>
-                  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eligendi, autem dolore similique hic dolor beatae voluptatibus iure ad reiciendis quaerat architecto atque minus amet, temporibus sapiente officiis praesentium blanditiis!</div>
+                  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eligendi, autem dolore similique hic dolor beatae voluptatibus iure ad reiciendis quaerat architecto atque minus amet, temporibus sapiente officiis praesentium blanditiis!</div> -->
                 </div>
               </div> <!-- Tab contents -->
             </section> <!-- Tabs and content -->

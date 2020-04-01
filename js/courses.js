@@ -310,6 +310,39 @@ function loadSingleCourseCard(course) {
     document.querySelector('.card').classList.add('border-0');
 }
 
+const courseOutlineContainer = document.getElementById('courseOutlineContainer');
 function loadCourseOutline(course) {
-    
+    // Thanks to: https://stackoverflow.com/questions/34240678/converting-json-object-to-js-key-value-pairs-array
+    let outline = $.map(course.courseOutline, (value, key) => [[key, value]]);
+    let count = 0; //Keeps track of what to call the tab heading.
+    const listTab =  document.getElementById('list-tab');
+    const navTabContent = document.getElementById('nav-tabContent');
+    outline.forEach(item => {
+        if(count == 0){
+            listTab.innerHTML = `<a class="list-group-item list-group-item-action active" id="list-${item[0]}-list" data-toggle="list" href="#list-${item[0]}" role="tab" aria-controls="home">${item[0]}</a>`;
+
+            navTabContent.innerHTML = `
+                <div class="tab-pane fade show active" id="list-${item[0]}" role="tabpanel" aria-labelledby="list-${item[0]}">
+                <h5 class="tab-content-title mb-5">Inherit Tab name</h5>
+                <p>${item[1]}</p>
+                </div>`;
+            
+        } else {
+            listTab.innerHTML += `<a class="list-group-item list-group-item-action" id="list-${item[0]}-list" data-toggle="list" href="#list-${item[0]}" role="tab" aria-controls="home">${item[0]}</a>`;
+
+            navTabContent.innerHTML += `
+                <div class="tab-pane fade" id="list-${item[0]}" role="tabpanel" aria-labelledby="list-${item[0]}">${item[1]}</div>
+            `;
+        }
+        count++;
+    });
+        
+        /*
+        listTab.innerHTML += `<a class="list-group-item list-group-item-action active" data-toggle="list" href="#${item[0]}" role="tab" aria-controls="home">${item[0]}</a>`;
+        //then:
+        navTabContent.innerHTML += `<div class="tab-pane fade show" id="${item[0]}" role="tabpanel" aria-labelledby="list-home-list">
+             <h5 class="tab-content-title mb-5">${item[0]}</h5>
+             <p>${item[1]}</p>
+         </div>`
+        */
 }
