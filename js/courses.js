@@ -347,21 +347,26 @@ function loadCourseOutline(course) {
 
 // CART PAGE:
 function populateCartPage() {
+    //Remove borders:
+    document.querySelectorAll('th').forEach(th => th.classList.add('border-0'));
+
     const tableBody = document.getElementById('tableBody');
     cart.forEach(item => {
         let newRecord = document.createElement('tr');
 
         let newRow = document.createElement('td');
         newRow.setAttribute('scope', 'row');
+        newRow.innerHTML = `<i class="fas fa-times" aria-hidden="true" style="margin-top: 40px"></i>`;
         newRecord.appendChild(newRow);
 
         let newImg = document.createElement('td');
-        newImg.innerHTML = `<img src="${item.image}"></img>`;
+        newImg.innerHTML = `<img src="${item.image}" style="width: 90px;"></img>`;
         newRecord.appendChild(newImg);
 
         let newContent = document.createElement('td');
         newContent.innerHTML = `<div class="row"><p>Become a ${item.title}</p></div>
                                 <div class="row"><p>${item.duration} - ${item.distance}</p></div>`;
+        // newContent.classList.add('ml-4');
         newRecord.appendChild(newContent);
 
         let newPrice = document.createElement('td');
