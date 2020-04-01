@@ -349,10 +349,10 @@ function loadCourseOutline(course) {
 function populateCartPage() {
     //Remove borders:
     document.querySelectorAll('th').forEach(th => th.classList.add('border-0'));
-    let grandTotal = 0;
+    let totals = 0.0;
     const tableBody = document.getElementById('tableBody');
     cart.forEach(item => {
-        grandTotal += item.price;
+        totals += item.price;
         let newRecord = document.createElement('tr');
 
         let newRow = document.createElement('td');
@@ -384,5 +384,16 @@ function populateCartPage() {
 
         tableBody.appendChild(newRecord);
     });
+    let vat = totals*0.15;
+    console.log('Vat  = ' + vat)
+    let grandTotal = (totals + vat).toFixed(0);
+    vat = vat.toFixed(0);
     console.log("Grand total for all items = R" + grandTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat');
+
+    //ADD TO "CART TOTALS":
+    document.getElementById('subtotalTD').innerText = 'R' + totals.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
+
+    document.getElementById('vatTD').innerText = 'R' + vat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+    document.getElementById('totalTD').innerText = 'R' + grandTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
 }

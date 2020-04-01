@@ -136,8 +136,8 @@
         </section>
 
         <!-- CART TOTALS -->
-        <aside class="container-fluid float-right mr-lg-5 mr-2 w-25">
-            <div id="cartTotalsDiv">
+        <aside class="container mr-lg-5 mr-2">
+            <div id="cartTotalsDiv" class="w-50 float-right">
                 <table class="table">
                     <thead>
                         <tr>
@@ -145,18 +145,23 @@
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody id="totalsBody">
+                    <tbody>
                         <tr>
                             <td scope="row">Subtotal</td>
-                            <td>R26,000,00 Excl Vat</td>
+                            <td id="subtotalTD">R26,000,00 Excl Vat</td>
                         </tr>
                         <tr>
                             <td scope="row">Vat(15%)</td>
-                            <td>R26,000,00 Excl Vat</td>
+                            <td id="vatTD">R26,000,00 Excl Vat</td>
                         </tr>
                         <tr>
                             <td scope="row">Total</td>
-                            <td>R1,700,00</td>
+                            <td id="totalTD">R1,700,00</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" colspan="2">
+                                <button class="w-100" >Enquire</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
