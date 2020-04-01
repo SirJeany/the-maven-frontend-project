@@ -7,7 +7,7 @@
     <link rel="icon" href="/assets/images/favicon.ico">
 
     <!-- Own css: -->
-    <link rel="stylesheet" href="/css/cart_style.css">
+    <link rel="stylesheet" href="/css/main_style.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/brand-carousel.css">
 
@@ -23,7 +23,7 @@
 <body>
     <!-- Nav bar: -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark header-main-nav">
+        <nav class="navbar navbar-expand-sm bg-dark header-main-nav">
             <!-- Banner icon: -->
             <div class="maven-img navbar-brand">
                 <img src="/assets/images/maven_academy_logo.png" alt="">
@@ -49,8 +49,34 @@
                         <li class="nav-item">
                             <a href="/pages/cart.html" class="nav-link ml-2 text-light">Cart</a>
                         </li>
+                        <!-- Cart icon and associative dropdown functionality: -->
                         <li class="navbar-brand">
-                            <a href="#" class="nav-link ml-2 text-light"><i class="fas fa-shopping-basket"></i></a>
+                            <!-- Icon and badge -->
+                            <a class="cart-wrapper-a" disabled href="/pages/cart.html">
+                                <div id="cartDiv" class="bg-light text-center dropdown">
+                                    <a type="button" id="dropdownMenu" class="text-dark align-middle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><i class="fas fa-shopping-basket"></i><span id="badge" class="badge badge-light">0</span></a>
+                                    <!-- Dropdown menu: -->
+                                    <div class="dropdown-menu dropdown-menu-right cart-font" aria-labelledby="dropdownMenu"> <!-- 'd-none d-md-block' : dropdown unavailable when on small screen -->
+                                        
+                                        <div id="coursesContainer" class="container ">
+                                            <!-- Standard items to appear: -->
+                                            <div class="dropdown-item">
+                                                <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                                                <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                                                <small class="row">Items</small>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+                                            <!-- Where the courses go: -->
+
+                                            <!-- <div id="restOfCourse" class="dropdown-item">
+
+                                            </div> -->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </li>
                         <!-- SVG Test:
                         <li class="navbar-brand">
@@ -63,78 +89,70 @@
     </header>
     
     <main>
-        <section class="container text-center mt-5">
-            <section id="cardsContainer" class="course-cards slider">
-                <div class="slide">
-                    <img src="/assets/images/companies-logo/logo-associated-media.png">
+        <!-- Little sticky cart: -->
+        <div id="stickyCartDiv" class="bg-light text-center dropdown">
+            <a href="#" id="dropdownMenuSticky" class="text-dark align-middle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-shopping-basket"></i><span id="stickyBadge" class="badge badge-light">0</span>
+            </a>
+            <div id="stickyCart" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuSticky">
+                <div class="dropdown-item">
+                    <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                    <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                    <small class="row">Items</small>
                 </div>
-                <div class="slide">
-                    <img src="/assets/images/companies-logo/logo-associated-media.png">
-                </div>
-            </section>
 
-            <!-- <div id="cardsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                <div class="col mb-4">
-                  <div class="card h-100">
-                    <img src="https://place-hold.it/200x100&text=New%20Course" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-            </div> -->
+                <div class="dropdown-divider"></div>
+            </div>
+        </div>
+
+        <section class="container-fluid ml-lg-5 mr-lg-5 ml-2 mr-2">
+            <article class="row">
+                <h2 class="display-4 mb-3">Cart</h2>
+            </article>
+            <article class="row">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col"><small>Products</small></th>
+                        <th scope="col"><small>Price</small></th>
+                        <th scope="col"><small>Quantity</small></th>
+                        <th scope="col"><small>Total</small></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </article>
         </section>
     </main>
 
-    <script src="/js/courses.js"></script>
-    <script src="/js/courses-carousel.js"></script>
-
-    <!-- Slick: -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <script>
-        let newCart = [
-            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
-            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
-            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"},
-            {"title": "Course 1", "text": "lorem ipsum studsfsdfsd sf sdfsd fsdfsd fs"}
-        ];
-
-        const cardsContainer = document.getElementById('cardsContainer');
-        function displayCards() {
-            newCart.forEach(card => {
-                let newSlide = document.createElement('div');
-                newSlide.classList.add('slide');
-
-                let newCard = document.createElement('div');
-                newCard.classList.add('card', 'h-100');
-
-                let newImg = document.createElement('img');
-                newImg.classList.add('card-img');
-                newImg.setAttribute('src', 'https://place-hold.it/200x100&text=New%20Course');
-                newCard.appendChild(newImg);
-
-                let newBody = document.createElement('div');
-                newBody.classList.add('card-body');
-                newCard.appendChild(newBody);
-
-                let newTitle = document.createElement('div');
-                newTitle.classList.add('card-title');
-                newTitle.innerText = card.title;
-                newBody.appendChild(newTitle);
-
-                let newText = document.createElement('div');
-                newText.classList.add('card-text');
-                newText.innerText = card.text;
-                newBody.appendChild(newText);
-
-                newSlide.appendChild(newCard);
-                cardsContainer.appendChild(newSlide);
-            });
-        }
-
-        displayCards();
+        document.querySelectorAll('th').forEach(th => th.classList.add('border-0'))
     </script>
+
+    <script src="/js/courses.js"></script>
+    <script type="text/javascript" src="/js/sticky-cart.js"></script>
+
+    <!-- Bootstrap: -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>
