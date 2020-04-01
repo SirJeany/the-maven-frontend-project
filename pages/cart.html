@@ -20,7 +20,7 @@
     <!-- Font awesome icons: -->
     <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="loadCart()">
     <!-- Nav bar: -->
     <header>
         <nav class="navbar navbar-expand-sm bg-dark header-main-nav">
@@ -105,14 +105,15 @@
             </div>
         </div>
 
-        <section class="container-fluid ml-lg-5 mr-lg-5 ml-2 mr-2">
-            <article class="row">
+        <section class="container-fluid">
+            <article class="row ml-lg-5 mr-lg-5 ml-2 mr-2">
                 <h2 class="display-4 mb-3">Cart</h2>
             </article>
-            <article class="row">
+            <article class="row ml-lg-5 mr-lg-5 ml-2 mr-2">
                 <table class="table table-hover">
                     <thead>
                       <tr>
+                        <th scope="col"></th>
                         <th scope="col"><small>Products</small></th>
                         <th scope="col"><small>Price</small></th>
                         <th scope="col"><small>Quantity</small></th>
@@ -121,21 +122,11 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td scope="row">x</td>
+                        <td >Course imgasd adasda sdas asda sd</td>
+                        <td>R26,000,00 Exl Vat</td>
+                        <td>Quantity</td>
+                        <td>R26,000,00 Exl Vat</td>
                       </tr>
                     </tbody>
                   </table>
@@ -147,7 +138,7 @@
         document.querySelectorAll('th').forEach(th => th.classList.add('border-0'))
     </script>
 
-    <script src="/js/courses.js"></script>
+    <script type="text/javascript" src="/js/courses.js"></script>
     <script type="text/javascript" src="/js/sticky-cart.js"></script>
 
     <!-- Bootstrap: -->
