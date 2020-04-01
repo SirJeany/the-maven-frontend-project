@@ -302,7 +302,7 @@ function loadCardDeck() {
 
 
 // LOAD COURE INFO:
-const singleCourseCard = document.getElementById('singleCourseCard');
+const singleCourseCard = document.getElementById('singleCourseCard'); 
 function loadSingleCourseCard(course) {
     let newCard = loadCard(course);
     singleCourseCard.appendChild(newCard);
