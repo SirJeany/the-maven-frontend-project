@@ -14,13 +14,13 @@ const allCourses = [
             "large": "/assets/images/full-stack-banner@3x.png"
         },
         "price": 26000,
-        "course-outline": {
-            "pre-work": "This is the pre-work for the Fullstack course",
+        "courseOutline": {
+            "preWork": "This is the pre-work for the Fullstack course",
             "module1": "This is the outline for the first module",
             "module2": "This is the outline for the second module",
             "module3": "This is the outline for the third module",
             "module4": "This is the outline for the fourth module",
-            "master-class": "These are the master class electives for the fullstack course"
+            "masterClass": "These are the master class electives for the fullstack course"
         },
         "available": true,
         "pageLink": "/pages/fullstack-course.html"
@@ -37,13 +37,13 @@ const allCourses = [
             "large": "/assets/images/frontend-dev@3x.png"
         },
         "price": 18000,
-        "course-outline": {
-            "pre-work": "This is the pre-work for the Front End Webdev course",
+        "courseOutline": {
+            "preWork": "This is the pre-work for the Front End Webdev course",
             "module1": "This is the outline for the first module",
             "module2": "This is the outline for the second module",
             "module3": "This is the outline for the third module",
             "module4": "This is the outline for the fourth module",
-            "master-class": "These are the master class electives for the Web Dev course"
+            "masterClass": "These are the master class electives for the Web Dev course"
         },
         "available": true,
         "pageLink": "/pages/all-courses.html"
@@ -297,4 +297,19 @@ function loadCardDeck() {
         newCol.appendChild(newCard);
         allCoursesCardDeck.appendChild(newCol);
     });
+
+}
+
+
+// LOAD COURE INFO:
+const singleCourseCard = document.getElementById('singleCourseCard');
+function loadSingleCourseCard(course) {
+    let newCard = loadCard(course);
+    singleCourseCard.appendChild(newCard);
+
+    document.querySelector('.card').classList.add('border-0');
+}
+
+function loadCourseOutline(course) {
+    
 }

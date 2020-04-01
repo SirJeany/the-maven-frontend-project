@@ -18,7 +18,7 @@
     <!-- Font awesome icons: -->
     <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="loadSingleCourseCard(allCourses[0])">
     <!-- Nav bar: -->
     <header>
         <nav class="navbar navbar-expand-lg bg-dark header-main-nav">
@@ -71,8 +71,8 @@
         <!-- Rest of stuff: -->
         <section class="row">
           <!-- COURSE CARD: -->
-          <article class="col-lg-3 container d-flex justify-content-center mb-5">
-                <div class="card border-light text-center" style="width: 18rem;">
+          <article id="singleCourseCard" class="col-lg-3 container d-flex justify-content-center mb-5 pl-5 pr-5">
+                <!-- <div class="card border-light text-center" style="width: 18rem;">
                     <div class="card-body">
                         <p class="card-title">Become a fullstack dev</p>
                         <small class="card-description">12 Week Course - In Class</small>
@@ -83,7 +83,7 @@
 
                     <button class="card-button">Add to Cart</button>
                     </div>
-                </div>
+                </div> -->
             </article>
 
           <!-- RIGHT - COURSE OUTLINE: -->
