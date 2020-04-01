@@ -349,9 +349,10 @@ function loadCourseOutline(course) {
 function populateCartPage() {
     //Remove borders:
     document.querySelectorAll('th').forEach(th => th.classList.add('border-0'));
-
+    let grandTotal = 0;
     const tableBody = document.getElementById('tableBody');
     cart.forEach(item => {
+        grandTotal += item.price;
         let newRecord = document.createElement('tr');
 
         let newRow = document.createElement('td');
@@ -378,9 +379,10 @@ function populateCartPage() {
         newRecord.appendChild(newQuantity);
 
         let newTotal = document.createElement('td');
-        newTotal.innerText = "R" + item.price + " Excl Vat";
+        newTotal.innerText = "R" + item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
         newRecord.appendChild(newTotal);
 
         tableBody.appendChild(newRecord);
     });
+    console.log("Grand total for all items = R" + grandTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat');
 }
