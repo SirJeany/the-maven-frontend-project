@@ -7,7 +7,7 @@ $(document).ready(function() {
     $(".course-cards").slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000,
         arrows: true,
         dots: false,
@@ -29,6 +29,6 @@ $(document).ready(function() {
     });
 });
 
-let carousel = document.querySelector('.course-cards-container')
+document.querySelector('.course-cards-container')
     .querySelectorAll('button.slick-arrow')
     .forEach(arrow => arrow.classList.add('bg-dark'));
