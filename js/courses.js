@@ -343,3 +343,39 @@ function loadCourseOutline(course) {
         count++;
     });
 }
+
+
+// CART PAGE:
+function populateCartPage() {
+    const tableBody = document.getElementById('tableBody');
+    cart.forEach(item => {
+        let newRecord = document.createElement('tr');
+
+        let newRow = document.createElement('td');
+        newRow.setAttribute('scope', 'row');
+        newRecord.appendChild(newRow);
+
+        let newImg = document.createElement('td');
+        newImg.innerHTML = `<img src="${item.image}"></img>`;
+        newRecord.appendChild(newImg);
+
+        let newContent = document.createElement('td');
+        newContent.innerHTML = `<div class="row"><p>Become a ${item.title}</p></div>
+                                <div class="row"><p>${item.duration} - ${item.distance}</p></div>`;
+        newRecord.appendChild(newContent);
+
+        let newPrice = document.createElement('td');
+        newPrice.innerText = "R" + item.price + " Excl Vat";
+        newRecord.appendChild(newPrice);
+
+        let newQuantity = document.createElement('td');
+        newQuantity.innerText = 1;
+        newRecord.appendChild(newQuantity);
+
+        let newTotal = document.createElement('td');
+        newTotal.innerText = "R" + item.price + " Excl Vat";
+        newRecord.appendChild(newTotal);
+
+        tableBody.appendChild(newRecord);
+    });
+}

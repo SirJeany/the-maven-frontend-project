@@ -20,7 +20,7 @@
     <!-- Font awesome icons: -->
     <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
 </head>
-<body onload="loadCart()">
+<body onload="loadCart(), populateCartPage()">
     <!-- Nav bar: -->
     <header>
         <nav class="navbar navbar-expand-sm bg-dark header-main-nav">
@@ -120,7 +120,7 @@
                         <th scope="col"><small>Total</small></th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tableBody">
                       <tr>
                         <td scope="row">x</td>
                         <td >Course imgasd adasda sdas asda sd</td>
