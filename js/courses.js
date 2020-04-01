@@ -23,7 +23,8 @@ const allCourses = [
             "masterClass": "Master CLass%These are the master class electives for the fullstack course"
         },
         "available": true,
-        "pageLink": "/pages/fullstack-course.html"
+        "pageLink": "/pages/fullstack-course.html",
+        "varIdentity": "fullStackWebDev"
     },
 
     {
@@ -46,7 +47,8 @@ const allCourses = [
             "masterClass": "These are the master class electives for the Web Dev course"
         },
         "available": true,
-        "pageLink": "/pages/all-courses.html"
+        "pageLink": "/pages/all-courses.html",
+        "varIdentity": "frontEndWebDev"
     }
 
 ]
@@ -257,7 +259,7 @@ function loadCard(course){
 
     let courseBtn = document.createElement('div');
     courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
-    courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>`;
+    courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="${course.varIdentity}.addToCart()">Add to enquiry</button>`;
     newBody.appendChild(courseBtn);
 
     newCard.appendChild(newBody);
@@ -301,13 +303,14 @@ function loadCardDeck() {
 }
 
 
-// LOAD COURE INFO:
+// LOAD COURSE INFO:
 const singleCourseCard = document.getElementById('singleCourseCard'); 
 function loadSingleCourseCard(course) {
     let newCard = loadCard(course);
     singleCourseCard.appendChild(newCard);
 
     document.querySelector('.card').classList.add('border-0');
+    document.querySelector('.course-buttons').classList.add('pl-1', 'pr-1', 'pb-2', 'pt-2');
 }
 
 const courseOutlineContainer = document.getElementById('courseOutlineContainer');
