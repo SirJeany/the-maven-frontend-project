@@ -15,12 +15,12 @@ const allCourses = [
         },
         "price": 26000,
         "courseOutline": {
-            "preWork": "This is the pre-work for the Fullstack course",
-            "module1": "This is the outline for the first module",
-            "module2": "This is the outline for the second module",
-            "module3": "This is the outline for the third module",
-            "module4": "This is the outline for the fourth module",
-            "masterClass": "These are the master class electives for the fullstack course"
+            "preWork": "Pre Work%This is the pre-work for the Fullstack course",
+            "module1": "Module 1%This is the outline for the first module",
+            "module2": "Module 2%This is the outline for the second module",
+            "module3": "Module 3%This is the outline for the third module",
+            "module4": "Module 4%This is the outline for the fourth module",
+            "masterClass": "Master CLass%These are the master class electives for the fullstack course"
         },
         "available": true,
         "pageLink": "/pages/fullstack-course.html"
@@ -318,20 +318,26 @@ function loadCourseOutline(course) {
     const listTab =  document.getElementById('list-tab');
     const navTabContent = document.getElementById('nav-tabContent');
     outline.forEach(item => {
+        let courseHeading = item[1].split('%').splice(0,1);
+        let courseContent = item[1].split('%').splice(1);
+        // console.log(courseContent);
         if(count == 0){
-            listTab.innerHTML = `<a class="list-group-item list-group-item-action active" id="list-${item[0]}-list" data-toggle="list" href="#list-${item[0]}" role="tab" aria-controls="home">${item[0]}</a>`;
+            listTab.innerHTML = `<a class="list-group-item list-group-item-action active" id="list-${item[0]}-list" data-toggle="list" href="#list-${item[0]}" role="tab" aria-controls="home">${courseHeading}</a>`;
 
             navTabContent.innerHTML = `
                 <div class="tab-pane fade show active" id="list-${item[0]}" role="tabpanel" aria-labelledby="list-${item[0]}">
-                <h5 class="tab-content-title mb-5">Inherit Tab name</h5>
-                <p>${item[1]}</p>
+                <h5 class="tab-content-title mb-5">${courseHeading}</h5>
+                <p>${courseContent}</p>
                 </div>`;
             
         } else {
-            listTab.innerHTML += `<a class="list-group-item list-group-item-action" id="list-${item[0]}-list" data-toggle="list" href="#list-${item[0]}" role="tab" aria-controls="home">${item[0]}</a>`;
+            listTab.innerHTML += `<a class="list-group-item list-group-item-action" id="list-${item[0]}-list" data-toggle="list" href="#list-${item[0]}" role="tab" aria-controls="home">${courseHeading}</a>`;
 
             navTabContent.innerHTML += `
-                <div class="tab-pane fade" id="list-${item[0]}" role="tabpanel" aria-labelledby="list-${item[0]}">${item[1]}</div>
+                <div class="tab-pane fade" id="list-${item[0]}" role="tabpanel" aria-labelledby="list-${item[0]}">
+                <h5 class="tab-content-title mb-5">${courseHeading}</h5>
+                <p>${courseContent}</p>
+                </div>
             `;
         }
         count++;
