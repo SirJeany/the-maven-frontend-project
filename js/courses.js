@@ -342,13 +342,4 @@ function loadCourseOutline(course) {
         }
         count++;
     });
-        
-        /*
-        listTab.innerHTML += `<a class="list-group-item list-group-item-action active" data-toggle="list" href="#${item[0]}" role="tab" aria-controls="home">${item[0]}</a>`;
-        //then:
-        navTabContent.innerHTML += `<div class="tab-pane fade show" id="${item[0]}" role="tabpanel" aria-labelledby="list-home-list">
-             <h5 class="tab-content-title mb-5">${item[0]}</h5>
-             <p>${item[1]}</p>
-         </div>`
-        */
 }
