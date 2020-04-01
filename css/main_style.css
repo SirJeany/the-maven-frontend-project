@@ -189,6 +189,13 @@ button:hover {
   padding: 10px 0px 10px 0px;
 }
 
+.card-course-detail-a {
+  color: var(--charcoal-grey);
+}
+.card-course-detail-a:hover {
+  color: var(--charcoal-grey);
+}
+
 /* Career services section */
 #careerServicesSection {
   margin-top: 40px;

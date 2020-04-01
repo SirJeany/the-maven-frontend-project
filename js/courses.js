@@ -46,7 +46,7 @@ const allCourses = [
             "master-class": "These are the master class electives for the Web Dev course"
         },
         "available": true,
-        "pageLink": "/pages/webdev-course.html"
+        "pageLink": "/pages/all-courses.html"
     }
 
 ]
@@ -252,7 +252,7 @@ function loadCard(course){
 
     let courseDetail = document.createElement('div');
     courseDetail.classList.add('card-text', 'text-center');
-    courseDetail.innerHTML = `<small><u><a href="${course.pageLink}">View course detail</a></u></small>`;
+    courseDetail.innerHTML = `<small><u><a class="card-course-detail-a" href="${course.pageLink}">View course detail</a></u></small>`;
     newBody.appendChild(courseDetail);
 
     let courseBtn = document.createElement('div');
