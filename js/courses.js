@@ -21,7 +21,9 @@ const allCourses = [
             "module3": "This is the outline for the third module",
             "module4": "This is the outline for the fourth module",
             "master-class": "These are the master class electives for the fullstack course"
-        }
+        },
+        "available": true,
+        "page-link": "/pages/fullstack-course.html"
     },
 
     {
@@ -42,7 +44,9 @@ const allCourses = [
             "module3": "This is the outline for the third module",
             "module4": "This is the outline for the fourth module",
             "master-class": "These are the master class electives for the Web Dev course"
-        }
+        },
+        "available": true,
+        "page-link": "/pages/webdev-course.html"
     }
 
 ]
@@ -270,45 +274,8 @@ try {
             let newSlide = document.createElement('div');
             newSlide.classList.add('slide', 'pb-4', 'pt-4');
 
-            let newCard = document.createElement('div');
-            newCard.classList.add('card', 'h-100', 'p-3');
+            let newCard = loadCard(course);
 
-            let newBody = document.createElement('div');
-            newBody.classList.add('card-body');
-
-            let cardTitle = document.createElement('div');
-            cardTitle.classList.add('card-title', 'text-blue-dodger');
-            cardTitle.innerHTML = `<strong>${course.title}</strong>`;
-            newBody.appendChild(cardTitle);
-
-            let courseDuration = document.createElement('div');
-            courseDuration.classList.add('card-text');
-            courseDuration.innerHTML = `<span>${course.duration} - ${course.distance}</span>`;
-            newBody.appendChild(courseDuration);
-
-            let courseImg = document.createElement('img');
-            courseImg.classList.add('card-img');
-            courseImg.setAttribute('src', course.images['small']);
-            newBody.appendChild(courseImg);
-
-            let coursePrice = document.createElement('div');
-            coursePrice.classList.add('card-text', 'text-center', 'text-blue-dodger');
-            let priceText = 'R' + course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
-            coursePrice.innerHTML = `<h5><strong>${priceText}</strong></h5>`;
-            newBody.appendChild(coursePrice);
-
-            let courseDetail = document.createElement('div');
-            courseDetail.classList.add('card-text', 'text-center');
-            courseDetail.innerHTML = `<small><u><a>View course detail</a></u></small>`;
-            newBody.appendChild(courseDetail);
-
-            let courseBtn = document.createElement('div');
-            courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
-            courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>`;
-            newBody.appendChild(courseBtn);
-
-            // Stitch it all together:
-            newCard.appendChild(newBody);
             newSlide.appendChild(newCard);
             cardsContainer.appendChild(newSlide);
         });
