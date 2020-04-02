@@ -23,7 +23,7 @@ const allCourses = [
             "masterClass": "Master CLass%These are the master class electives for the fullstack course"
         },
         "available": true,
-        "pageLink": "./pages/fullstack-course.html",
+        "pageLink": "./fullstack-course.html",
         "varIdentity": "fullStackWebDev"
     },
 
@@ -47,7 +47,7 @@ const allCourses = [
             "masterClass": "These are the master class electives for the Web Dev course"
         },
         "available": true,
-        "pageLink": "./pages/webdev-course.html",
+        "pageLink": "./webdev-course.html",
         "varIdentity": "frontEndWebDev"
     }
 
@@ -137,7 +137,7 @@ const stickyCart = document.getElementById('stickyCart');
 
 const viewBasketDiv = document.getElementById('viewBasketDiv');
 let viewBasketBtn = document.createElement('button');
-viewBasketBtn.onclick =  () => location.href = "./pages/cart.html";
+viewBasketBtn.onclick =  () => location.href = "./cart.html";
 viewBasketBtn.innerText = "View Basket";
 viewBasketDiv.appendChild(viewBasketBtn);
 
