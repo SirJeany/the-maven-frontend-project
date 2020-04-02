@@ -9,9 +9,9 @@ const allCourses = [
         "duration": "12 Week Course",
         "distance": "In Class",
         "images": {
-            "small": "/assets/images/full-stack-banner.png",
-            "medium": "/assets/images/full-stack-banner@2x.png",
-            "large": "/assets/images/full-stack-banner@3x.png"
+            "small": "./assets/images/full-stack-banner.png",
+            "medium": "./assets/images/full-stack-banner@2x.png",
+            "large": "./assets/images/full-stack-banner@3x.png"
         },
         "price": 26000,
         "courseOutline": {
@@ -23,7 +23,7 @@ const allCourses = [
             "masterClass": "Master CLass%These are the master class electives for the fullstack course"
         },
         "available": true,
-        "pageLink": "/pages/fullstack-course.html",
+        "pageLink": "./pages/fullstack-course.html",
         "varIdentity": "fullStackWebDev"
     },
 
@@ -33,9 +33,9 @@ const allCourses = [
         "duration": "4 Week Course",
         "distance": "In Class",
         "images": {
-            "small": "/assets/images/frontend-dev.png",
-            "medium": "/assets/images/frontend-dev@2x.png",
-            "large": "/assets/images/frontend-dev@3x.png"
+            "small": "./assets/images/frontend-dev.png",
+            "medium": "./assets/images/frontend-dev@2x.png",
+            "large": "./assets/images/frontend-dev@3x.png"
         },
         "price": 18000,
         "courseOutline": {
@@ -47,7 +47,7 @@ const allCourses = [
             "masterClass": "These are the master class electives for the Web Dev course"
         },
         "available": true,
-        "pageLink": "/pages/all-courses.html",
+        "pageLink": "./pages/webdev-course.html",
         "varIdentity": "frontEndWebDev"
     }
 
@@ -112,8 +112,8 @@ Course.prototype.removeFromCart = function () {
 
 // Some courses:
 
-let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', '/assets/images/full-stack-banner.png', 26000);
-let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', '/assets/images/frontend-dev.png', 18000);
+let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000);
+let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000);
 
 // CART:
 // Contains all courses that the user wishes to buy.
@@ -137,7 +137,7 @@ const stickyCart = document.getElementById('stickyCart');
 
 const viewBasketDiv = document.getElementById('viewBasketDiv');
 let viewBasketBtn = document.createElement('button');
-viewBasketBtn.onclick =  () => location.href = "/pages/cart.html";
+viewBasketBtn.onclick =  () => location.href = "./pages/cart.html";
 viewBasketBtn.innerText = "View Basket";
 viewBasketDiv.appendChild(viewBasketBtn);
 
