@@ -180,7 +180,7 @@ function addCourseToCart(course) {
     flexContainer.appendChild(removeContainer);
 
     let removeBtnIcon = document.createElement('i'); // x button icon
-    removeBtnIcon.id = "removeBtnIcon" + course.courseID;
+    removeBtnIcon.id = "removeBtnIcon" + course.courseID; 
     removeBtnIcon.classList.add('fas', 'fa-times');
     removeContainer.appendChild(removeBtnIcon);
 
