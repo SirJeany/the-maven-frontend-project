@@ -87,10 +87,12 @@ button:hover {
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: disc;
 }
 
 li {
   list-style-type: none;
+  /* flex-direction: column; */
 }
 
 /* Top Area: */
@@ -284,8 +286,15 @@ li {
 }
 
 .footer-nav-imgs {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
+}
+
+.address ul li {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .title-bottom-nav {
