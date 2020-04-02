@@ -68,7 +68,8 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
 
 // POPULATE THE CART: 
 // to be done on each page load.
-function loadCart() {
+$(document).ready(function() {
+    console.log(document.cookie);
     document.cookie.split(';').forEach(cookie => {
         let id = cookie.split('=')[0].trim();
         let course = cookie.split('=')[1].trim();
@@ -89,7 +90,7 @@ function loadCart() {
             console.log('nothing')
         }
     });
-}
+});
 
 // COURSE PROTOTYPES:
 
