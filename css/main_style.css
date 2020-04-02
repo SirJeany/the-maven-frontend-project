@@ -83,6 +83,16 @@ button:hover {
   color: var(--charcoal-grey);
 }
 
+/* All lists: */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 /* Top Area: */
 #top {
   background-color: rgba(91, 157, 227, 0.08);
@@ -271,6 +281,11 @@ button:hover {
   /* margin: 1rem 12.5% 2rem 12.5%; */
   /* padding: 2rem; */
   /* float: left; */
+}
+
+.footer-nav-imgs {
+  width: 20px;
+  height: 20px;
 }
 
 .title-bottom-nav {
