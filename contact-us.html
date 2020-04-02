@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="icon" href="./assets/images/favicon.ico">
+
+    <!-- Own styles: -->
+    <link rel="stylesheet" href="./css/main_style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/brand-carousel.css">
+
+    <!-- Bootstrap link:  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+
+    <!-- Slick CSS: -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+    
+    <!-- Jquery: -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    
+    <!-- Font awesome icons: -->
+    <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Nav bar: -->
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark header-main-nav">
+            <!-- Banner icon: -->
+            <div class="maven-img navbar-brand">
+                <img src="./assets/images/maven_academy_logo.png" alt="">
+            </div>
+            <!-- Toggle on collapse button: -->
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTopNav" aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            
+            <!-- Rest of nav: -->
+            <div class="collapse navbar-collapse" id="navbarTopNav">
+                <div class="d-flex justify-content-end ml-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="./index.html" class="nav-link ml-2 text-light">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./all-courses.html" class="nav-link ml-2 text-light">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact-us.html" class="nav-link ml-2 text-light">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./cart.html" class="nav-link ml-2 text-light">Cart</a>
+                        </li>
+                        <!-- Cart icon and associative dropdown functionality: -->
+                        <li class="navbar-brand">
+                            <!-- Icon and badge -->
+                            <a class="cart-wrapper-a" disabled href="./cart.html">
+                                <div id="cartDiv" class="bg-light text-center dropdown">
+                                    <a type="button" id="dropdownMenu" class="text-dark align-middle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><i class="fas fa-shopping-basket"></i><span id="badge" class="badge badge-light">0</span></a>
+                                    <!-- Dropdown menu: -->
+                                    <div class="dropdown-menu dropdown-menu-right cart-font" aria-labelledby="dropdownMenu"> <!-- 'd-none d-md-block' : dropdown unavailable when on small screen -->
+                                        <div id="coursesContainer">
+                                            <!-- Standard items to appear: -->
+                                            <div class="dropdown-item">
+                                                <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                                                <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                                                <small class="row">Items</small>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+                                            <!-- Where the courses go: -->                                            
+                                        </div>
+                                        <div id="viewBasketDiv" class="text-center mt-4"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main section: -->
+    <main>
+        <!-- Little sticky cart: -->
+        <div id="stickyCartDiv" class="bg-light text-center dropdown">
+            <a href="#" id="dropdownMenuSticky" class="text-dark align-middle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-shopping-basket"></i><span id="stickyBadge" class="badge badge-light">0</span>
+            </a>
+            <div id="stickyCart" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuSticky">
+                <div id="stickyCartContainer">
+                    <div class="dropdown-item">
+                        <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                        <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                        <small class="row">Items</small>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+                </div>
+                <div id="viewStickyBasketDiv" class="text-center mt-4"></div>
+            </div>
+        </div>
+
+        <!-- Top welcome part: -->
+        <section class="container-fluid d-flex flex-column" id="top">
+            <!-- Heading: -->
+            <article class="row d-flex flex-column justify-content-center">
+                <h1 class="main-headings text-center display-4">Next level training in</h1>
+                <div class="main-headings typewrite text-center display-4 " data-period="3000" data-type='["Web development", "User experience design", "User interface design", "Mobile development", "Software development"]'><span class="wrap"></span></div>
+
+            </article>
+
+            <!-- Main image: -->
+            <article class="row d-flex justify-content-center">
+                <img id="topImg" src="./assets/images/tech-mavens.png" alt="">
+            </article>
+
+            <!-- Below-image text: -->
+            <article class="row d-flex justify-content-center mt-5">
+                <h2 id="subHeadingText">Take your tech career to the next level with our immersive software development programmes
+                </h2>
+            </article>
+            <article class="row d-flex justify-content-center">
+                <button id="findOutMoreBtn" class="shadow">FIND OUT MORE</button>
+            </article>
+        </section>
+
+    </main>
+
+
+    <!-- Footer: -->
+    <footer id="footer" class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ml-5">
+            <div class="footer-nav-general col">
+                <a class="title-bottom-nav" href="">GENERAL</a>
+                <a href=""><p class="bottom-nav ">Home</p></a>
+                <a href=""><p class="bottom-nav">Faq</p></a>
+            </div>
+            <div class="footer-nav-general col">
+                <a class="title-bottom-nav active-link" href="">WHY US</a>
+                <p class="bottom-nav">Why study with us?</p>
+                <p class="bottom-nav">Financial Aid - Study for just R1</p>
+                <p class="bottom-nav">Internship - work, learn & earn</p>
+            </div>
+            <div class="footer-nav-general col">
+                <a class="title-bottom-nav active-link" href="">DEVELOPER COURSES</a>
+                <a href=""><p class="bottom-nav">Full Stack Web Developer</p></a>
+            </div>
+            <div class="footer-nav-general col">
+                <p class="title-bottom-nav">CONTACT US</p>
+                <div class="address">
+                    <ul>
+                        <li class="d-flex  justify-content-start align-items-center">
+                            <img class="footer-nav-imgs mr-3" src="./assets/images/phone-icon.svg" alt="">
+                            <h4 class="pb-2 text-light"><strong>+27 21 461 6817</strong></h4>
+                        </li>
+                        <li class="d-flex  justify-content-start align-items-center">
+                            <img class="footer-nav-imgs mr-3" src="./assets/images/email-icon.svg" alt="">
+                            <a class="bottom-nav pb-2 text-light">hello@mavenacademy.one</a>
+                        </li>
+                        <li class="d-flex  justify-content-start align-items-center mb-0">
+                            <img class="footer-nav-imgs mr-3" src="./assets/images/location-icon.svg" alt="">
+                            <p class="bottom-nav ">Office F01A, Brookside Office Park</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom most footer: -->
+    <footer id="bottomBlackFooter" class="container-fluid">
+        <div class="row d-flex justify-content-between">
+            <div>
+                <p id="rightsReserved">All Rights Reserved. Maven Academy (Pty) Ltd.</p>
+            </div>
+            <div>
+                <a href=""><img class="bot-nav-socials" src="./assets/images/facebook.svg" alt="Facebook"></a>
+                <a href=""><img class="bot-nav-socials" src="./assets/images/twitter.svg" alt="Twitter"></a>
+                <a href=""><img class="bot-nav-socials" src="./assets/images/instagram.svg" alt="Insta"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts: -->
+    <script type="text/javascript" src="./js/courses.js"></script>
+    <script type="text/javascript" src="./js/courses.json"></script>
+    <script type="text/javascript" src="./js/sticky-cart.js"></script>
+    <script type="text/javascript" src="./js/brand-carousel.js"></script>
+    <script type="text/javascript" src="./js/courses-carousel.js"></script>
+
+    <!-- Top Text effects: -->
+    <script src="./js/font-effects.js"></script>
+    <!-- Bootstrap: -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Slick: -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
