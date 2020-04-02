@@ -3,7 +3,11 @@ We are building a fully responsive website that will use vanilla html, css and J
 
 # Get started:
 ## Click on github pages link
-## OR Fork -> open in vs Code. Open with live server extention.
+## OR Fork -> open in vs Code. Open with live server extention..
+
+# Dummy data:
+Dummy cards were added to index.html - Our courses. This is just to show off the ability to have a carousel
+Remove Dummy data where indicated.
 
 # Issues: 
 ## Issue 1:
@@ -11,7 +15,14 @@ Removing items from cart (By pressing the x) will remove the cart item to an ext
 Refreshing does show that the item has indeed been removed - type in document.cookie into the console.
 
 ## Issue 2/ToDo:
-Popup and grey-ing out of page yet to be implemented for the 'Click here to dl curriculum' on the course pages. (As is shown by the Zeplin brief)
+Popup and grey-ing out of page yet to be implemented for the 'Click here to dl curriculum' on the course pages. (As is shown by the Zeplin brief).
+
+# ToDo:
+## ToDo 1:
+Update the arrows of the carousel accoring to that of Zeplin brief.
+
+## ToDo 2:
+Update the 'Contact Us' page.
 
 # Adding courses:
 There are two or three places that one must update a course currently.
