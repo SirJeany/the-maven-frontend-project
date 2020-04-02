@@ -77,10 +77,13 @@ let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course
 
 // POPULATE THE CART: 
 // to be done on each page load.
+// https://stackoverflow.com/questions/588040/window-onload-vs-document-onload
 // Dynamicy rating: LOW - would need to update this part for more courses to be recognised in the cookie cutter
-$(document).ready(function() {
+$(document).ready(populateCartFromCookies);
+function populateCartFromCookies() {
     document.cookie.split(';').forEach(crum => {
-        if(crum.split('=').length > 1){ // Check if cookie holds any courses.
+        if(crum.split('=').length > 1 && crum.split('=')[1].length > 1){ // Check if cookie holds any courses.
+            console.log(crum.split('=').length);
             let id = crum.split('=')[0].trim();
             let course = crum.split('=')[1].trim();
 
@@ -98,7 +101,7 @@ $(document).ready(function() {
             console.log("Cookie has nothing");
         }
     });
-});
+}
 
 // COURSE PROTOTYPES:
 // Function to add course to cart:
@@ -123,11 +126,18 @@ Course.prototype.removeFromCart = function () {
             console.log("Found " + this.title)
             itemIndex = cart.indexOf(item);
 
+            cart.splice(itemIndex, 1); // Remove from cart - easy
+
+            //Remove from document.cookie:
+            document.cookie = this.courseID + "=;";
+
             return itemIndex;
         } else { 
             console.log(this.title + " not in cart yet.");
         } 
     });
+    console.log("Cart AFTER deleting: ");
+    console.log(cart);
     return itemIndex;
 }
 
@@ -169,13 +179,14 @@ function addCourseToCart(course) {
     removeContainer.classList.add('d-flex', 'align-items-center', 'mr-4');
     flexContainer.appendChild(removeContainer);
 
-    let removeBtnLink = document.createElement('a'); // x button a wrapper
-    removeBtnLink.classList.add('remove-from-cart-btn');
-    removeContainer.appendChild(removeBtnLink);
+    // let removeBtnLink = document.createElement('a'); // x button a wrapper
+    // removeBtnLink.classList.add('remove-from-cart-btn');
+    // removeContainer.appendChild(removeBtnLink);
 
     let removeBtnIcon = document.createElement('i'); // x button icon
+    removeBtnIcon.id = "removeBtnIcon" + course.courseID;
     removeBtnIcon.classList.add('fas', 'fa-times');
-    removeBtnLink.appendChild(removeBtnIcon);
+    removeContainer.appendChild(removeBtnIcon);
 
     let imgContainer = document.createElement('div'); // Course img container
     imgContainer.classList.add('mr-3');
