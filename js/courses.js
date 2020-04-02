@@ -135,6 +135,18 @@ function populateOurCourses() {
 const coursesContainer = document.getElementById('coursesContainer');
 const stickyCart = document.getElementById('stickyCart');
 
+const viewBasketDiv = document.getElementById('viewBasketDiv');
+let viewBasketBtn = document.createElement('button');
+viewBasketBtn.onclick =  () => location.href = "/pages/cart.html";
+viewBasketBtn.innerText = "View Basket";
+viewBasketDiv.appendChild(viewBasketBtn);
+
+// if(cart.length > 0){
+//     viewBasketBtn.setAttribute('disabled', 'false');
+// } else {
+//     viewBasketBtn.setAttribute('disabled', 'true');
+// }
+
 let fragment = document.createDocumentFragment(); // Fragment to be cloned. Holds all things until we add the contents to the individual carts.
 
 function addCourseToCart(course) {
@@ -184,9 +196,6 @@ function addCourseToCart(course) {
     courseCost.classList.add('cart-course-text', 'd-block');
     courseCost.textContent = 'R' + course.price + ' Excl Vat';
     textContainer.appendChild(courseCost);
-
-
-    // ToDo: Append 'view basket'
 
     //Edit badge:
     document.getElementById('badge').innerHTML = cart.length;
