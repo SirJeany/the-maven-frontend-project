@@ -53,6 +53,10 @@ const allCourses = [
 
 ]
 
+// CART:
+// Contains all courses that the user wishes to buy.
+let cart = [];
+
 // Courses class:
 function Course(courseID, title, duration, distance, image, price, courseOutline) {
     this.courseID = courseID;
@@ -109,25 +113,13 @@ Course.prototype.addToCart = function () {
 // Function to bin course from cart: 
 Course.prototype.removeFromCart = function () {
     // Code to find the appropriate element in the array and remove it
-    // cart.pop();
+    // cart.splice();
 }
 
 // Some courses:
 
 let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000);
 let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000);
-
-// CART:
-// Contains all courses that the user wishes to buy.
-let cart = [];
-
-// CODE TO POPULATE COURSES ON PAGE:
-
-function populateOurCourses() {
-    allCourses.forEach(course => {
-
-    });
-}
 
 // CODE TO ADD COURSES TO CART:
 // Note:
@@ -137,7 +129,8 @@ function populateOurCourses() {
 const coursesContainer = document.getElementById('coursesContainer');
 const stickyCart = document.getElementById('stickyCart');
 
-const viewBasketDiv = document.getElementById('viewBasketDiv');
+const viewBasketDiv = document.getElementById('viewBasketDiv'); //Main nav cart
+const viewBasketDiv = document.getElementById('viewStickyBasketDiv'); //Sticky cart
 let viewBasketBtn = document.createElement('button');
 viewBasketBtn.onclick =  () => location.href = "./cart.html";
 viewBasketBtn.innerText = "View Basket";
