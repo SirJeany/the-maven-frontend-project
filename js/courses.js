@@ -133,6 +133,7 @@ let viewBasketBtn = document.createElement('button');
 viewBasketBtn.onclick =  () => location.href = "./cart.html";
 viewBasketBtn.innerText = "View Basket";
 let basketBtnClone = viewBasketBtn.cloneNode(true);
+basketBtnClone.onclick =  () => location.href = "./cart.html";
 try {
     viewBasketDiv.appendChild(viewBasketBtn);
     viewStickyBasketDiv.appendChild(basketBtnClone);
