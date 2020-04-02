@@ -68,6 +68,11 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
     this.courseOutline = courseOutline;
 }
 
+// Some courses:
+
+let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000);
+let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000);
+
 
 
 // POPULATE THE CART: 
@@ -96,7 +101,6 @@ $(document).ready(function() {
 });
 
 // COURSE PROTOTYPES:
-
 // Function to add course to cart:
 Course.prototype.addToCart = function () {
     let check = addToCookies(this);
@@ -110,14 +114,22 @@ Course.prototype.addToCart = function () {
 
 // Function to bin course from cart: 
 Course.prototype.removeFromCart = function () {
-    // Code to find the appropriate element in the array and remove it
-    // cart.splice();
+    console.log("Cart before deleting: ");
+    console.log(cart);
+    let itemIndex = -1;
+    cart.forEach(item => { 
+        console.log(item);
+        if( item.courseID === this.courseID) { 
+            console.log("Found " + this.title)
+            itemIndex = cart.indexOf(item);
+
+            return itemIndex;
+        } else { 
+            console.log(this.title + " not in cart yet.");
+        } 
+    });
+    return itemIndex;
 }
-
-// Some courses:
-
-let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000);
-let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000);
 
 // CODE TO ADD COURSES TO CART:
 // Note:
