@@ -68,6 +68,7 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
 
 // POPULATE THE CART: 
 // to be done on each page load.
+// Dynamicy rating: LOW - would need to update this part for more courses to be recognised in the cookie cutter
 $(document).ready(function() {
     console.log(document.cookie);
     document.cookie.split(';').forEach(cookie => {
