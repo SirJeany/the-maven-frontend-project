@@ -74,13 +74,11 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
 // to be done on each page load.
 // Dynamicy rating: LOW - would need to update this part for more courses to be recognised in the cookie cutter
 $(document).ready(function() {
-    console.log(document.cookie);
-    document.cookie.split(';').forEach(cookie => {
-        let id = cookie.split('=')[0].trim();
-        let course = cookie.split('=')[1].trim();
+    document.cookie.split(';').forEach(crum => {
+        if(crum.split('=').length > 1){ // Check if cookie holds any courses.
+            let id = crum.split('=')[0].trim();
+            let course = crum.split('=')[1].trim();
 
-        if (course) {
-            console.log(id);
             switch (id) {
                 case "001": console.log('adding ' + course + ' to cart');
                     cart.push(fullStackWebDev);
@@ -92,7 +90,7 @@ $(document).ready(function() {
                     break;
             }
         } else {
-            console.log('nothing')
+            console.log("Cookie has nothing");
         }
     });
 });
@@ -130,12 +128,14 @@ const coursesContainer = document.getElementById('coursesContainer');
 const stickyCart = document.getElementById('stickyCart');
 
 const viewBasketDiv = document.getElementById('viewBasketDiv'); //Main nav cart
-const viewBasketDiv = document.getElementById('viewStickyBasketDiv'); //Sticky cart
+const viewStickyBasketDiv = document.getElementById('viewStickyBasketDiv'); //Sticky cart
 let viewBasketBtn = document.createElement('button');
 viewBasketBtn.onclick =  () => location.href = "./cart.html";
 viewBasketBtn.innerText = "View Basket";
+let basketBtnClone = viewBasketBtn.cloneNode(true);
 try {
     viewBasketDiv.appendChild(viewBasketBtn);
+    viewStickyBasketDiv.appendChild(basketBtnClone);
 } catch (error) {
     console.log("No Cart on this page");
 }
