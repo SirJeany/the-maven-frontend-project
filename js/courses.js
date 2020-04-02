@@ -83,16 +83,17 @@ $(document).ready(populateCartFromCookies);
 function populateCartFromCookies() {
     document.cookie.split(';').forEach(crum => {
         if(crum.split('=').length > 1 && crum.split('=')[1].length > 1){ // Check if cookie holds any courses.
-            console.log(crum.split('=').length);
             let id = crum.split('=')[0].trim();
             let course = crum.split('=')[1].trim();
 
             switch (id) {
-                case "001": console.log('adding ' + course + ' to cart');
+                case "001": console.log('Adding ' + course + ' to cart');
                     cart.push(fullStackWebDev);
                     addCourseToCart(fullStackWebDev);
+                    // Remove functionality:
+                    document.getElementById('removeBtnIcon' + id).addEventListener('click', fullStackWebDev.removeFromCart());
                     break;
-                case "002": console.log('adding ' + course + ' to cart');
+                case "002": console.log('Adding ' + course + ' to cart');
                     cart.push(frontEndWebDev);
                     addCourseToCart(frontEndWebDev);
                     break;
