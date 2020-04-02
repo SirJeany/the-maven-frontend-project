@@ -1,9 +1,17 @@
 ## the-maven-frontend-project
 We are building a fully responsive website that will use vanilla html, css and JavaScript. 
 
+# Get started:
+## Click on github pages link
+## OR Fork -> open in vs Code. Open with live server extention.
+
 # Issues: 
+## Issue 1:
 Removing items from cart (By pressing the x) will remove the cart item to an extent - but an error with the eventhandler that connects the 'x' to the course interrupts the process.
 Refreshing does show that the item has indeed been removed - type in document.cookie into the console.
+
+## Issue 2/ToDo:
+Popup and grey-ing out of page yet to be implemented for the 'Click here to dl curriculum' on the course pages. (As is shown by the Zeplin brief)
 
 # Adding courses:
 There are two or three places that one must update a course currently.
