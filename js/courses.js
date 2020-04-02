@@ -125,7 +125,7 @@ let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course
 
 // The carts:
 const coursesContainer = document.getElementById('coursesContainer');
-const stickyCart = document.getElementById('stickyCart');
+const stickyCart = document.getElementById('stickyCartContainer');
 
 const viewBasketDiv = document.getElementById('viewBasketDiv'); //Main nav cart
 const viewStickyBasketDiv = document.getElementById('viewStickyBasketDiv'); //Sticky cart
@@ -201,13 +201,6 @@ function addCourseToCart(course) {
     coursesContainer.appendChild(fragment); // Put the container in the cart.
     stickyCart.appendChild(fragClone); // Put course in sticky cart as well.
 }
-
-
-// COOKIES:
-// let cookies = document.cookie;
-//Clear cookies at start of site:
-// document.cookie = '001=;';
-// document.cookie = '002=;';
 
 // CODE FOR COOKIES:
 // @Program: Function to add a course to the cookies.
