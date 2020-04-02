@@ -20,7 +20,7 @@ const allCourses = [
             "module2": "Module 2%This is the outline for the second module",
             "module3": "Module 3%This is the outline for the third module",
             "module4": "Module 4%This is the outline for the fourth module",
-            "masterClass": "Master CLass%These are the master class electives for the fullstack course"
+            "masterClass": "Master Class%These are the master class electives for the fullstack course"
         },
         "available": true,
         "pageLink": "./fullstack-course.html",
@@ -39,12 +39,12 @@ const allCourses = [
         },
         "price": 18000,
         "courseOutline": {
-            "preWork": "This is the pre-work for the Front End Webdev course",
-            "module1": "This is the outline for the first module",
-            "module2": "This is the outline for the second module",
-            "module3": "This is the outline for the third module",
-            "module4": "This is the outline for the fourth module",
-            "masterClass": "These are the master class electives for the Web Dev course"
+            "preWork": "Pre Work%This is the pre-work for the Front End Webdev course",
+            "module1": "Module1%This is the outline for the first module",
+            "module2": "Module2%This is the outline for the second module",
+            "module3": "Module3%This is the outline for the third module",
+            "module4": "Module4%This is the outline for the fourth module",
+            "masterClass": "Master Class%These are the master class electives for the Web Dev course"
         },
         "available": true,
         "pageLink": "./webdev-course.html",
