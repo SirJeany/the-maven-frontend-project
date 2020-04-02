@@ -139,7 +139,12 @@ const viewBasketDiv = document.getElementById('viewBasketDiv');
 let viewBasketBtn = document.createElement('button');
 viewBasketBtn.onclick =  () => location.href = "./cart.html";
 viewBasketBtn.innerText = "View Basket";
-viewBasketDiv.appendChild(viewBasketBtn);
+try {
+    viewBasketDiv.appendChild(viewBasketBtn);
+} catch (error) {
+    console.log("No Cart on this page");
+}
+
 
 // if(cart.length > 0){
 //     viewBasketBtn.setAttribute('disabled', 'false');
