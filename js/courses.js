@@ -91,7 +91,7 @@ function populateCartFromCookies() {
                     cart.push(fullStackWebDev);
                     addCourseToCart(fullStackWebDev);
                     // Remove functionality:
-                    document.getElementById('removeBtnIcon' + id).addEventListener('click', fullStackWebDev.removeFromCart());
+                    // document.getElementById('removeBtnIcon' + id).addEventListener('click', fullStackWebDev.removeFromCart());
                     break;
                 case "002": console.log('Adding ' + course + ' to cart');
                     cart.push(frontEndWebDev);
