@@ -179,10 +179,6 @@ function addCourseToCart(course) {
     removeContainer.classList.add('d-flex', 'align-items-center', 'mr-4');
     flexContainer.appendChild(removeContainer);
 
-    // let removeBtnLink = document.createElement('a'); // x button a wrapper
-    // removeBtnLink.classList.add('remove-from-cart-btn');
-    // removeContainer.appendChild(removeBtnLink);
-
     let removeBtnIcon = document.createElement('i'); // x button icon
     removeBtnIcon.id = "removeBtnIcon" + course.courseID;
     removeBtnIcon.classList.add('fas', 'fa-times');
