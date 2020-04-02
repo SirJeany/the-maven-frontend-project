@@ -97,6 +97,8 @@ button:hover {
 /* Heading text (effects in js): */
 .typewrite {
   height: 100px;
+  color: var(--dark-sky-blue);
+  font-weight: bolder;
 }
 
 #findOutMoreBtn {
