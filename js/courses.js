@@ -142,12 +142,6 @@ try {
 }
 
 
-// if(cart.length > 0){
-//     viewBasketBtn.setAttribute('disabled', 'false');
-// } else {
-//     viewBasketBtn.setAttribute('disabled', 'true');
-// }
-
 let fragment = document.createDocumentFragment(); // Fragment to be cloned. Holds all things until we add the contents to the individual carts.
 
 function addCourseToCart(course) {
