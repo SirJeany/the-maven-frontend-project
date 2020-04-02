@@ -17,6 +17,9 @@ Refreshing does show that the item has indeed been removed - type in document.co
 ## Issue 2/ToDo:
 Popup and grey-ing out of page yet to be implemented for the 'Click here to dl curriculum' on the course pages. (As is shown by the Zeplin brief).
 
+## Issue 3:
+Courses dont load in cart page immeditaely - a refresh is required. This may be due to the courses and so being grabbed from cookies and then appended to elements only then to be added to the DOM.
+
 # ToDo:
 ## ToDo 1:
 Update the arrows of the carousel accoring to that of Zeplin brief.
