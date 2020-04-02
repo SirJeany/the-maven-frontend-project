@@ -15,12 +15,12 @@ const allCourses = [
         },
         "price": 26000,
         "courseOutline": {
-            "preWork": "Pre Work%This is the pre-work for the Fullstack course",
-            "module1": "Module 1%This is the outline for the first module",
-            "module2": "Module 2%This is the outline for the second module",
-            "module3": "Module 3%This is the outline for the third module",
-            "module4": "Module 4%This is the outline for the fourth module",
-            "masterClass": "Master Class%These are the master class electives for the fullstack course"
+            "preWork": "Pre Work%You don’t have to understand everything about the MEAN stack to dive in to the introductory tutorial. Your initial challenge will be to build Google’s official “Tour of Heroes” app. Don’t worry! We’re going to explain the hard parts in great detail during your course.",
+            "module1": "Module 1%You’ve completed the Tour of Heroes tutorial as your pre-work; now we’ll build upon that together as a class with a “Tour of Students” app. We’ll review some core concepts in HTML, JS, and CSS to make sure they’re fresh, then jump into HTML5 advanced features, TypeScript, and SCSS to give your code superpowers.",
+            "module2": "Module 2%Get ready to jump into the deep end! Our detailed study of Angular will simulate a real-world onboarding experience, just as you may expect to experience when you’re hired and beginning your first job with Angular. You’ll look over an Angular app running in production, and dissect it piece by piece as you build it back up from the ground up as a class. You’ll make the leap from your Tour of Students app to the production-grade final solution where you’ll add yourself to the database as a Maven Academy Alumni for all the world to see!",
+            "module3": "Module 3%Node.js is a powerful back end environment, and you’ll learn everything you need to support your Angular app with a back end server running the Express framework, MongoDB with the Mongoose ORM, and a REST API you can be proud of.",
+            "module4": "Module 4%Cutting your teeth in new territory, you’ll be asked to change how certain parts of the app behave, as well as adding new features on your own. This is when the going gets tough, but don’t worry! Your instructors will guide you through everything you need to prepare for a self-sufficient mindset as you prepare to graduate and enter the workforce.",
+            "masterClass": "Master Class Electives%We take you the extra mile in our standard curriculum, but for those that want to go even further beyond that—check out our Master Class Electives."
         },
         "available": true,
         "pageLink": "./fullstack-course.html",
@@ -39,12 +39,12 @@ const allCourses = [
         },
         "price": 18000,
         "courseOutline": {
-            "preWork": "Pre Work%This is the pre-work for the Front End Webdev course",
-            "module1": "Module1%This is the outline for the first module",
-            "module2": "Module2%This is the outline for the second module",
-            "module3": "Module3%This is the outline for the third module",
-            "module4": "Module4%This is the outline for the fourth module",
-            "masterClass": "Master Class%These are the master class electives for the Web Dev course"
+            "preWork": "Pre Work%All you need to have done beforehand, is create a few accounts with websites like Github, Gmail, CodePen and LinkedIn so that you can hit the ground running on Day 1.",
+            "module1": "Module1%Welcome to The Maven Academy. This is the beginning of your journey to becoming a world-class developer. This course will take you through the information as though you're starting a new job as a frontend web developer. Learn 'on the job' and up-skill in both the core aspects of HTML, CSS & Javascript, as well as being a useful team member at your first job.",
+            "module2": "Module2%We need intro In this module, you'll learn about the fundamentals of every web page: HTML & CSS. Using these 2 technologies, you'll see how to create beautiful components and layouts to create your very own site. You'll also learn how to keep a log of every change to your files, through Git, and how to safely store your code on Github. here…",
+            "module3": "Module3%In this module, you'll discover the power of your first programming language — Javascript. You'll learn core concepts and techniques to make your website more dynamic and interactive.",
+            "module4": "Module4%By phase 3, you will be familiar with Javascript in the front-end. So now it's time to see how Javascript can also be a powerful back-end. Using Node.js, we'll explore how Javascript can power a server, and how you can easily add functionality to your system with the Node Package Manager.",
+            "masterClass": "Master Class Electives%We take you the extra mile in our standard curriculum, but for those that want to go even further beyond that—check out our Master Class Electives."
         },
         "available": true,
         "pageLink": "./webdev-course.html",
