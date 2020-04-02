@@ -11,4 +11,4 @@ There are two or three places that one must update a course currently.
 2) A new object needs to be created using the new Course cntr function.
 3) Edit the populateCartFromCookies() function to include the new course in the switch statement.
 
--- Additionally One would need to add an extra course page - very easy. Just copy and rename any other course page then replace the indecies <body onload="loadSingleCourseCard(allCourses[x]), loadCourseOutline(allCourses[x])"> with the appropriate index of course ocurrence in the 'allCourses' object.
+-- Additionally One would need to add an extra course page - very easy. Just copy and rename any other course page then replace the indecies <.body onload="loadSingleCourseCard(allCourses[x]), loadCourseOutline(allCourses[x])"> with the appropriate index of course ocurrence in the 'allCourses' object.
