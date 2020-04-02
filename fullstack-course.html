@@ -49,13 +49,30 @@
                         <li class="nav-item">
                             <a href="./cart.html" class="nav-link ml-2 text-light">Cart</a>
                         </li>
+                        <!-- Cart icon and associative dropdown functionality: -->
                         <li class="navbar-brand">
-                            <a href="#" class="nav-link ml-2 text-light"><i class="fas fa-shopping-basket"></i></a>
+                            <!-- Icon and badge -->
+                            <a class="cart-wrapper-a" disabled href="./cart.html">
+                                <div id="cartDiv" class="bg-light text-center dropdown">
+                                    <a type="button" id="dropdownMenu" class="text-dark align-middle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><i class="fas fa-shopping-basket"></i><span id="badge" class="badge badge-light">0</span></a>
+                                    <!-- Dropdown menu: -->
+                                    <div class="dropdown-menu dropdown-menu-right cart-font" aria-labelledby="dropdownMenu"> <!-- 'd-none d-md-block' : dropdown unavailable when on small screen -->
+                                        <div id="coursesContainer">
+                                            <!-- Standard items to appear: -->
+                                            <div class="dropdown-item">
+                                                <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                                                <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                                                <small class="row">Items</small>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+                                            <!-- Where the courses go: -->                                            
+                                        </div>
+                                        <div id="viewBasketDiv" class="text-center mt-4"></div>
+                                    </div>
+                                </div>
+                            </a>
                         </li>
-                        <!-- SVG Test:
-                        <li class="navbar-brand">
-                            <a href="#" class="nav-link ml-2"><img src="/assets/images/app-summary-icon.svg" alt=""></a>
-                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -63,6 +80,25 @@
     </header>
     
     <main class="container-fluid">
+        <!-- Little sticky cart: -->
+        <div id="stickyCartDiv" class="bg-light text-center dropdown">
+            <a href="#" id="dropdownMenuSticky" class="text-dark align-middle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-shopping-basket"></i><span id="stickyBadge" class="badge badge-light">0</span>
+            </a>
+            <div id="stickyCart" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuSticky">
+                <div id="stickyCartContainer">
+                    <div class="dropdown-item">
+                        <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                        <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                        <small class="row">Items</small>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+                </div>
+                <div id="viewStickyBasketDiv" class="text-center mt-4"></div>
+            </div>
+        </div>
+
         <!-- Back btn -->
         <div class="row">
           <div class="back-btn m-4">
@@ -182,7 +218,8 @@
     </footer>
 
     <!-- Own JS: -->
-    <script src="./js/courses.js"></script>
+    <script type="text/javascript" src="./js/courses.js"></script>
+    <script type="text/javascript" src="./js/sticky-cart.js"></script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
