@@ -23,6 +23,10 @@ body {
   display: block;
 }
 
+.bg-dark-sky-a {
+  background-color: var(--dark-sky-blue-8);
+}
+
 /* NAV BAR */
 #badge {
   border-radius: 50%;

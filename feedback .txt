@@ -17,7 +17,7 @@ Functionality:
 
 	- All courses page - bg X
 
-	- Get delete working
+	- Get delete working X
 
 
 	- Contact us page 
