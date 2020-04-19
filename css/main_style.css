@@ -5,6 +5,11 @@
   --dark-sky-blue-8: rgba(91, 157, 227, 0.08);
 }
 
+html {
+  /* Make the scroll smooth when linking to same page */
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
