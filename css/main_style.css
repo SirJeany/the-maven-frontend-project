@@ -275,6 +275,7 @@ li {
   font-weight: normal;
   color: #60a0e3;
 }
+
 .faq-a:hover {
   text-decoration: none;
   color: #60a0e3;
@@ -317,10 +318,33 @@ li {
   margin: 0;
 }
 
-/* ALL-COURSES.html: */
+/* ALL-COURSES.html: PAGE */
 
 #allCoursesMain {
   background-color: var(--dark-sky-blue-8)
+}
+
+/* CONTACT-US.html PAGE */
+.form-control {
+  border-radius: 22px !important;
+}
+
+.mail-link {
+  text-decoration-line: underline;
+  font-weight: normal;
+  color: var(--charcoal-grey);
+}
+
+.mail-link:hover {
+  color: #60a0e3;
+}
+
+.phone-link {
+  color: #60a0e3;
+}
+.phone-link:hover {
+  text-decoration-line: none;
+  color: #60a0e3;
 }
 
 /* All images to be removed: */
