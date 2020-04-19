@@ -379,7 +379,7 @@ function populateCartPage() {
 
         let newRow = document.createElement('td');
         newRow.setAttribute('scope', 'row');
-        newRow.innerHTML = `<i class="fas fa-times" aria-hidden="true" style="margin-top: 40px"></i>`;
+        newRow.innerHTML = `<i class="fas fa-times" onclick="${item.varIdentity}.removeFromCart(), location.reload()" aria-hidden="true" style="margin-top: 40px"></i>`;
         newRecord.appendChild(newRow);
 
         let newImg = document.createElement('td');
