@@ -56,7 +56,7 @@
 
   .title-bottom-nav {
     font-family: 'Titillium Web', Titillium , sans-serif;
-    font-size: .7rem;
+    font-size: 14px;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -72,8 +72,8 @@
 
   .bottom-nav {
     font-family: 'Titillium Web', Titillium , sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 50%;

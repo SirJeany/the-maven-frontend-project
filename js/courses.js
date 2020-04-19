@@ -246,7 +246,7 @@ function loadCard(course){
     newCard.classList.add('card', 'h-100', 'p-3');
 
     let newBody = document.createElement('div');
-    newBody.classList.add('card-body');
+    newBody.classList.add('card-body', 'text-center');
 
     let cardTitle = document.createElement('div');
     cardTitle.classList.add('card-title', 'text-blue-dodger');
@@ -264,18 +264,18 @@ function loadCard(course){
     newBody.appendChild(courseImg);
 
     let coursePrice = document.createElement('div');
-    coursePrice.classList.add('card-text', 'text-center', 'text-blue-dodger');
+    coursePrice.classList.add('card-text', 'text-blue-dodger');
     let priceText = 'R' + course.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ',00 Excl Vat';
     coursePrice.innerHTML = `<h5><strong>${priceText}</strong></h5>`;
     newBody.appendChild(coursePrice);
 
     let courseDetail = document.createElement('div');
-    courseDetail.classList.add('card-text', 'text-center');
+    courseDetail.classList.add('card-text');
     courseDetail.innerHTML = `<small><u><a class="card-course-detail-a" href="${course.pageLink}">View course detail</a></u></small>`;
     newBody.appendChild(courseDetail);
 
     let courseBtn = document.createElement('div');
-    courseBtn.classList.add('text-center', 'd-flex', 'flex-column');
+    courseBtn.classList.add('d-flex', 'flex-column');
     courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="${course.varIdentity}.addToCart()">Add to enquiry</button>`;
     newBody.appendChild(courseBtn);
 
@@ -296,7 +296,7 @@ try {
             let newCard = loadCard(course);
 
             newSlide.appendChild(newCard);
-            cardsContainer.appendChild(newSlide);
+            cardsContainer.prepend(newSlide);
         });
     }
     displayCourses(); //Give time to get cookies into cart
@@ -314,7 +314,7 @@ function loadCardDeck() {
         let newCard = loadCard(course);
         
         newCol.appendChild(newCard);
-        allCoursesCardDeck.appendChild(newCol);
+        allCoursesCardDeck.prepend(newCol);
     });
 
 }
