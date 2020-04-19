@@ -58,7 +58,7 @@ const allCourses = [
 let cart = [];
 
 // Courses class:
-function Course(courseID, title, duration, distance, image, price, courseOutline) {
+function Course(courseID, title, duration, distance, image, price, courseOutline, varIdentity) {
     this.courseID = courseID;
     this.title = title;
     this.duration = duration;
@@ -66,12 +66,13 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
     this.image = image;
     this.price = price;
     this.courseOutline = courseOutline;
+    this.varIdentity = varIdentity;
 }
 
 // Some courses:
 
-let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000);
-let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000);
+let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000, '', "fullStackWebDev");
+let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000, '', "frontEndWebDev");
 
 
 
@@ -183,6 +184,7 @@ function addCourseToCart(course) {
     let removeBtnIcon = document.createElement('i'); // x button icon
     removeBtnIcon.id = "removeBtnIcon" + course.courseID; 
     removeBtnIcon.classList.add('fas', 'fa-times');
+    removeBtnIcon.setAttribute('onclick', course.varIdentity + '.removeFromCart(), location.reload()');
     removeContainer.appendChild(removeBtnIcon);
 
     let imgContainer = document.createElement('div'); // Course img container
