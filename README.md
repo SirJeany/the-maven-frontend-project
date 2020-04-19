@@ -1,4 +1,4 @@
-# the-maven-frontend-project
+# The Maven Frontend Project
 We are building a fully responsive website that will use vanilla html, css and JavaScript. 
 
 ## Get started:
@@ -48,4 +48,4 @@ There are two or three places that one must update a course currently.
 
 ## Acknowledgements:
 * **Nate Williams** - Lecturer and guide. Thanks for all your time and effort.
-* **Md. Ashiqur Rahman** - As a reference to using the slick carousel [mdashikar](https://codepen.io/mdashikar/pen/VWPvgE)
+* **Md. Ashiqur Rahman** - As a reference to using the slick carousel [Client Logo Slider](https://codepen.io/mdashikar/pen/VWPvgE)
