@@ -257,7 +257,7 @@ li {
   border-color: white;
 }
 
-/* What students think section: */
+/* WHAT STUDENTS THINK SECTION: */
 #studentsThinkSection {
   background-color: #36414c;
   color: white;
@@ -273,7 +273,7 @@ li {
   margin-left: -13px;
 }
 
-/* Thanks for enquiry section: */
+/* THANKS FOR ENQUIRY SECTION: */
 #thanksImg {
   width: 400px;
 }
@@ -292,7 +292,7 @@ li {
   color: #60a0e3;
 }
 
-/* Footer: */
+/* FOOTER: */
 #footer {
   /* height: 20rem; */
   background-color: #36414c;
@@ -331,6 +331,12 @@ li {
 
 #rightsReserved {
   margin: 0;
+}
+
+/* ALL-COURSES.html: */
+
+#allCoursesMain {
+  background-color: var(--dark-sky-blue-8)
 }
 
 /* All images to be removed: */
