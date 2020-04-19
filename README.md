@@ -16,26 +16,8 @@ We are building a fully responsive website that will use vanilla html, css and J
     - Install the extention "Live Server": https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
     - Launch Live Server through VS Code. This should open the default browser, displaying the app.
 
-## Issues: 
-### Issue 1:
-Removing items from cart (By pressing the x) will remove the cart item to an extent - but an error with the eventhandler that connects the 'x' to the course interrupts the process.
-Refreshing does show that the item has indeed been removed - type in document.cookie into the console.
-
-### Issue 2/ToDo:
-Popup and grey-ing out of page yet to be implemented for the 'Click here to dl curriculum' on the course pages. (As is shown by the Zeplin brief).
-
-### Issue 3:
-Courses dont load in cart page immeditaely - a refresh is required. This may be due to the courses and so being grabbed from cookies and then appended to elements only then to be added to the DOM.
-
-## ToDo:
-### ToDo 1:
-Update the arrows of the carousel accoring to that of Zeplin brief.
-
-### ToDo 2:
-Update the 'Contact Us' page.
-
 ## Adding courses:
-There are two or three places that one must update a course currently.
+### There are two or three places that one must update a course currently.
 1) The JSON 'allcourses' object.
 2) A new object needs to be created using the new Course cntr function.
 3) Edit the populateCartFromCookies() function to include the new course in the switch statement.
