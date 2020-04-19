@@ -266,42 +266,6 @@
                         </div>
                         <!-- DUMMY DATA END -->
                     </section>
-                    
-                    
-                    <!-- <div class="card-deck">
-                        <div class="card">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title">Full Stack Web Dev</h5>
-                                <p class="card-text">12 Week Course - In Class</p>
-                                <img src="/assets/images/full-stack-banner.png" class="card-img" alt="...">
-                                <p class="card-text">Price</p>
-                                <small class="card-text">View course detail</small>
-                                <button class="course-buttons" onclick="fullStackWebDev.addToCart()">Add to enquiry</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title">Front End Web Dev</h5>
-                                <p class="card-text">4 Week Course - In Class</p>
-                                <img src="/assets/images/frontend-dev-banner.png" class="card-img" alt="...">
-                                <p class="card-text">Price</p>
-                                <small class="card-text">View course detail</small>
-                                <button class="course-buttons" onclick="frontEndWebDev.addToCart()">Add to enquiry</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title">Become a Java Spring Boot Dev</h5>
-                                <p class="card-text">4 Week Course - In Class</p>
-                                <img src="/assets/images/spring-boot-dev@3x.png" class="card-img" alt="...">
-                                <p class="card-text">Price</p>
-                                <small class="card-text">View course detail</small>
-                                <button class="course-buttons" disabled onclick="javaSpring.addToCart()">Add to enquiry</button>
-                            </div>
-                        </div>
-                    </div> -->
                 </article>
             </div>
         </section>
@@ -342,28 +306,54 @@
         </section>
 
         <!-- What the students think: -->
-        <section id="studentsThinkSection" class="container-fluid">
-            <div class="row">
-                <article id="studentsArticle" class="container col-md-5 pt-4 pb-4">
-                    <h2 id="studentsThinkHeading" class="row">
-                        What our students think about our courses
-                    </h2>
-                    <p class="row text-wrap students-p">
-                        Being a Digital Account Manager I’ve wanted to transition into the world of programming to better understand how to manage teams and build my own digital assets for web and mobile. I found that this 4 week web fundamentals course truly gave me all the necessary skills and tools to achieve my goals.
-                    </p>
-                    <a href="#" class="nav-link name-link p-0">~ Kay Solomons</a>
-                </article>
-                <aside id="studentsThinkAside" class="container d-flex flex-column justify-content-center col-md-6 pl-4">
-                    <div class="jus">
-                        <img id="studentThinkImg" class="img-fluid" src="./assets/images/Kay.jpg" alt="">
+        <section id="studentsThinkSection" class="mt-5 mb-5">
+            <div class="container mt-5 mb-5">
+                <div class="students-slider slider">
+                    <!-- Kay -->
+                    <div class="slide">
+                        <div class="row">
+                            <article id="studentsArticle" class="container col-md-5 pt-4 pb-4">
+                                <h2 id="studentsThinkHeading" class="row">
+                                    What our students think about our courses
+                                </h2>
+                                <p class="row text-wrap students-p">
+                                    Being a Digital Account Manager I’ve wanted to transition into the world of programming to better understand how to manage teams and build my own digital assets for web and mobile. I found that this 4 week web fundamentals course truly gave me all the necessary skills and tools to achieve my goals.
+                                </p>
+                                <a href="#" class="nav-link name-link p-0">~ Kay Solomons</a>
+                            </article>
+                            <aside id="studentsThinkAside" class="container d-flex flex-column justify-content-center col-md-6 pl-4">
+                                <div class="jus">
+                                    <img id="studentThinkImg" class="img-fluid" src="./assets/images/Kay.jpg" alt="">
+                                </div>
+                                
+                            </aside>
+                        </div>
                     </div>
-                    
-                </aside>
+                    <!-- Neil -->
+                    <div class="slide">
+                        <div class="row">
+                            <article id="studentsArticle" class="container col-md-5 pt-4 pb-4">
+                                <h2 id="studentsThinkHeading" class="row">
+                                    What our students think about our courses
+                                </h2>
+                                <p class="row text-wrap students-p">
+                                    Being a certified Scrum Master & Product Owner - I have a general love for process and systems. The 4 Week Web Fundamentals course was the perfect fit to help me better equip myself for the technical roles I fulfil as a team lead in web projects. This course has helped take my career to new heights, and has thought me some seriously valuable insights into coding.
+                                </p>
+                                <a href="#" class="nav-link name-link p-0">~ Neil Lennon</a>
+                            </article>
+                            <aside id="studentsThinkAside" class="container d-flex flex-column justify-content-center col-md-6 pl-4">
+                                <div class="jus">
+                                    <img id="studentThinkImg" class="img-fluid" src="./assets/images/neil.jpg" alt="">
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Thanks section: -->
-        <section class="container-fluid thanks-section">
+        <section class="container-fluid thanks-section mt-5 mb-5">
             <!-- Top image: -->
             <div class="row justify-content-center">
                 <img id="thanksImg" src="./assets/images/contact-banner@3x.png" alt="">
@@ -378,11 +368,11 @@
             </h5>
             <!-- Contact info: -->
             <p class="row thanks-contact-faq justify-content-center">
-                Or call us directly on <span class="thanks-contact-faq-num"> +27 (0)87 073 5694</span>
+                Or call us directly on <span class="thanks-contact-faq-num ml-1"> +27 (0)87 073 5694</span>
             </p>
             <!-- Faq link: -->
             <p class="row thanks-contact-faq justify-content-center">
-                Need a quicker answer? Visit our Faq page: <a class="faq-a" href="#">Click here</a>
+                Need a quicker answer? Visit our Faq page: <a class="faq-a ml-1" href="#">Click here</a>
             </p>
         </section>
 
@@ -452,6 +442,7 @@
     <script type="text/javascript" src="./js/sticky-cart.js"></script>
     <script type="text/javascript" src="./js/brand-carousel.js"></script>
     <script type="text/javascript" src="./js/courses-carousel.js"></script>
+    <script type="text/javascript" src="./js/students-carousel.js"></script>
 
     <!-- Top Text effects: -->
     <script src="./js/font-effects.js"></script>
