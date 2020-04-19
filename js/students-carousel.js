@@ -9,7 +9,9 @@ $(document).ready(function() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        arrows: true,
+        // arrows: true,
+        nextArrow: '.next-student',
+        prevArrow: false,
         dots: false,
         pauseOnHover: false
     });

@@ -9,7 +9,8 @@ $(document).ready(function() {
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 1000,
-        arrows: true,
+        prevArrow: false,
+        nextArrow: '.next-course',
         dots: false,
         pauseOnHover: true,
         responsive: [
