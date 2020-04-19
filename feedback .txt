@@ -12,7 +12,7 @@ Functionality:
 	- Find out more link to courses X
 	- Read more btn smooth scrolls to All courses X
 	- Our courses: Take out dummy. Input a greyed in thing X
-	- Students carousel
+	- Students carousel X
 	- Footer fonts X
 
 	- All courses page - bg X
