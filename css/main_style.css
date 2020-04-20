@@ -113,11 +113,13 @@ button {
   border-radius: 30px !important;
   white-space: nowrap; /* Stops text from wrapping */
   background-color: inherit;
+  transition: 0.3s;
 }
 
 button:hover {
+  transition: 0.3s;
   background-color: #5b9de3;
-  color: var(--charcoal-grey);
+  color: white;
 }
 
 .next-btn {
@@ -159,10 +161,12 @@ li {
 
 #findOutMoreBtn {
   background-color: #5b9de3;
+  transition: 0.3s;
 }
 #findOutMoreBtn:hover {
+  transition: 0.3s;
   background-color: inherit;
-  color: var(--charcoal-grey);
+  color: var(--dark-sky-blue);
 }
 
 /* Middle Area  */
