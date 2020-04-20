@@ -224,7 +224,7 @@ li {
 }
 
 .card {
-  /* width: 372px; */
+  width: 328px;
   min-width: 100px;
   transition: transform .2s;
 }
@@ -249,6 +249,7 @@ li {
 /* Dummy Cards: */
 .dummy_cards{
   height: 494px;
+  width: 328px;
 }
 
 .dummy_cards::before {
