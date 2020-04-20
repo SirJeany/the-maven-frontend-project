@@ -36,6 +36,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
+  background-color: var(--charcoal-grey);
 }
 
 .navbar-nav .nav-link{
@@ -90,8 +91,8 @@ header {
   opacity: 0.8;
 }
 
-/* STICKY CART */
-#stickyCartDiv {
+/* STICKY CART - No longer used*/
+/* #stickyCartDiv {
   border-radius: 50%;
   height: 40px;
   width: 40px;
@@ -100,8 +101,7 @@ header {
   margin-left: auto;
   margin-right: 1.3rem;
   z-index: 1;
-  /* transition: display 2s; */
-}
+} */
 
 /* All buttons: */
 button {
@@ -360,7 +360,7 @@ li {
 /* ALL-COURSES.html: PAGE */
 
 #allCoursesMain {
-  background-color: var(--dark-sky-blue-8)
+  background-color: var(--charcoal-grey);
 }
 
 /* CONTACT-US.html PAGE */
