@@ -149,7 +149,8 @@ Course.prototype.removeFromCart = function () {
 
 // The carts:
 const coursesContainer = document.getElementById('coursesContainer');
-const stickyCart = document.getElementById('stickyCartContainer');
+// Sticky cart removed.
+// const stickyCart = document.getElementById('stickyCartContainer');
 
 const viewBasketDiv = document.getElementById('viewBasketDiv'); //Main nav cart
 const viewStickyBasketDiv = document.getElementById('viewStickyBasketDiv'); //Sticky cart
@@ -216,12 +217,12 @@ function addCourseToCart(course) {
 
     //Edit badge:
     document.getElementById('badge').innerHTML = cart.length;
-    document.getElementById('stickyBadge').innerHTML = cart.length;
+    // document.getElementById('stickyBadge').innerHTML = cart.length;
 
     //Stitch them together:
     let fragClone = fragment.cloneNode(true); //Create the clone
     coursesContainer.appendChild(fragment); // Put the container in the cart.
-    stickyCart.appendChild(fragClone); // Put course in sticky cart as well.
+    // stickyCart.appendChild(fragClone); // Put course in sticky cart as well.
 }
 
 // CODE FOR COOKIES:
