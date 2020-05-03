@@ -246,7 +246,7 @@ function addToCookies(course) {
 // GENERAL FUNCTION TO LOAD CARDS:
 function loadCard(course){
     let newCard = document.createElement('div');
-    newCard.classList.add('card', 'h-100', 'p-3');
+    newCard.classList.add('card', 'h-100');
 
     let newBody = document.createElement('div');
     newBody.classList.add('card-body', 'text-center');

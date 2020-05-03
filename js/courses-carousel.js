@@ -15,21 +15,19 @@ $(document).ready(function() {
         pauseOnHover: true,
         responsive: [
         {
-            breakpoint: 900,
+            breakpoint: 1200,
             settings: {
-            slidesToShow: 2
+                slidesToShow: 2
             }
         },
         {
-            breakpoint: 560,
+            breakpoint: 500,
             settings: {
-            slidesToShow: 1
+                // centerMode: true,
+                // centerPadding: '20px',
+                slidesToShow: 1
             }
         }
         ]
     });
 });
-
-document.querySelector('.course-cards-container')
-    .querySelectorAll('button.slick-arrow')
-    .forEach(arrow => arrow.classList.add('bg-dark'));
