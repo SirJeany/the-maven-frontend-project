@@ -1,24 +1,6 @@
-Project feedback from NATE:
-The threee areas of critarea: Code quality, Functionality, Self learning
-
-Code quality:
-	Readme: Just sort out the bullet points etc. --
-
-
-Functionality:
-	- Cart icon remove the white circle bg and just make the cart icon light as well  X
-	- Maven logo should redirect to home	X
-	- Font whight of typewriter X
-	- Find out more link to courses X
-	- Read more btn smooth scrolls to All courses X
-	- Our courses: Take out dummy. Input a greyed in thing X
-	- Students carousel X
-	- Footer fonts X
-
-	- All courses page - bg X
-
-	- Get delete working X
-
-
-	- Contact us page 
-
+For me todo:
+Check the responisiveness of the application again - 
+	- Carousels,
+	- Cart page,
+	- Size of cards on small devices
+	- Top typewriter -> remove flex for container?
