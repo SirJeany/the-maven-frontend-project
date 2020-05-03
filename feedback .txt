@@ -4,3 +4,4 @@ Check the responisiveness of the application again -
 	- Cart page,
 	- Size of cards on small devices
 	- Top typewriter -> remove flex for container?
+	- Footer...

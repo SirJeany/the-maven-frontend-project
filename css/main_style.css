@@ -166,7 +166,7 @@ li {
 
 /* Heading text (effects in js): */
 .typewrite {
-  height: 100px;
+  margin: 10px 0;
   color: var(--dark-sky-blue);
   font-weight: bolder;
 }
