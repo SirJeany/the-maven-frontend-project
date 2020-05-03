@@ -279,7 +279,7 @@ function loadCard(course){
     newBody.appendChild(courseDetail);
 
     let courseBtn = document.createElement('div');
-    courseBtn.classList.add('d-flex', 'flex-column');
+    courseBtn.classList.add('d-flex', 'flex-column', 'card-button-div');
     courseBtn.innerHTML = `<button class="course-buttons text-wrap" onclick="${course.varIdentity}.addToCart()">Add to enquiry</button>`;
     newBody.appendChild(courseBtn);
 

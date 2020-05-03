@@ -240,6 +240,7 @@ li {
   /* width: 328px; */
   /* min-width: 100%; */
   min-width: 200px;
+  min-height: 490px;
   max-width: 328px;
   /* margin: 0 50px; */
   transition: transform .2s;
@@ -263,10 +264,9 @@ li {
 }
 
 /* Dummy Cards: */
-/* .dummy_cards{ */
-  /* height: 494px; */
-  /* width: 328px; */
-/* } */
+/* .dummy_cards{
+  min-height: ;
+} */
 
 .dummy_cards::before {
   content:"";
