@@ -58,7 +58,7 @@ const allCourses = [
 let cart = [];
 
 // Courses class:
-function Course(courseID, title, duration, distance, image, price, courseOutline, varIdentity) {
+function Course(courseID, title, duration, distance, image, price, courseOutline, varIdentity, pageLink) {
     this.courseID = courseID;
     this.title = title;
     this.duration = duration;
@@ -67,12 +67,13 @@ function Course(courseID, title, duration, distance, image, price, courseOutline
     this.price = price;
     this.courseOutline = courseOutline;
     this.varIdentity = varIdentity;
+    this.pageLink = pageLink;
 }
 
 // Some courses:
 
-let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000, '', "fullStackWebDev");
-let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000, '', "frontEndWebDev");
+let fullStackWebDev = new Course('001', 'Full Stack Web Developer', '12 Week Course', 'In Class', './assets/images/full-stack-banner.png', 26000, '', "fullStackWebDev", "./fullstack-course.html");
+let frontEndWebDev = new Course('002', 'Front End Web Developer', '4 Week Course', 'In Class', './assets/images/frontend-dev.png', 18000, '', "frontEndWebDev", "./webdev-course.html");
 
 
 
@@ -384,21 +385,23 @@ function populateCartPage() {
         newRecord.appendChild(newRow);
 
         let newImg = document.createElement('td');
-        newImg.innerHTML = `<img src="${item.image}" style="width: 90px;"></img>`;
+        newImg.innerHTML = `<a href="${item.pageLink}"><img src="${item.image}" style="width: 90px;"></img></a>`;
         newRecord.appendChild(newImg);
 
         let newContent = document.createElement('td');
         newContent.innerHTML = `<div class="row"><p>Become a ${item.title}</p></div>
                                 <div class="row"><p>${item.duration} - ${item.distance}</p></div>`;
-        // newContent.classList.add('ml-4');
+        newContent.classList.add('remove');
         newRecord.appendChild(newContent);
 
         let newPrice = document.createElement('td');
         newPrice.innerText = "R" + item.price + " Excl Vat";
+        newPrice.classList.add('remove');
         newRecord.appendChild(newPrice);
 
         let newQuantity = document.createElement('td');
         newQuantity.innerText = 1;
+        newQuantity.classList.add('remove');
         newRecord.appendChild(newQuantity);
 
         let newTotal = document.createElement('td');

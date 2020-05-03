@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main_style.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/brand-carousel.css">
+    <link rel="stylesheet" href="./css/cart_style.css">
 
     <!-- Bootstrap link:  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -31,9 +32,7 @@
                 </a>
             </div>
             <!-- Toggle on collapse button: -->
-            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTopNav" aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon "></span>
-            </button>
+            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarTopNav" aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation"><span class="text-light"><i class="fas fa-bars fa-1x"></i></span></button>
             
             <!-- Rest of nav: -->
             <div class="collapse navbar-collapse" id="navbarTopNav">
@@ -115,9 +114,9 @@
                       <tr>
                         <th scope="col"></th>
                         <th scope="col"><small>Products</small></th>
-                        <th scope="col"></th>
-                        <th scope="col"><small>Price</small></th>
-                        <th scope="col"><small>Quantity</small></th>
+                        <th class="remove" scope="col"></th>
+                        <th class="remove" scope="col"><small>Price</small></th>
+                        <th class="remove" scope="col"><small>Quantity</small></th>
                         <th scope="col"><small>Total</small></th>
                       </tr>
                     </thead>
@@ -136,8 +135,8 @@
         </section>
 
         <!-- CART TOTALS -->
-        <aside class="container mr-lg-5 mr-2">
-            <div id="cartTotalsDiv" class="w-50 float-right">
+        <aside class="container mr-lg-5 mr-2 clearfix">
+            <div id="cartTotalsDiv" class="float-right">
                 <table class="table">
                     <thead>
                         <tr>

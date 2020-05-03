@@ -240,6 +240,7 @@ li {
   /* width: 328px; */
   /* min-width: 100%; */
   min-width: 200px;
+  max-width: 328px;
   /* margin: 0 50px; */
   transition: transform .2s;
 }
