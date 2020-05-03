@@ -208,6 +208,7 @@ li {
   background-color: #5b9de3;
   border-radius: .5rem;
   padding: 12px;
+  margin: 20px 0px 10px
 }
 
 .reason-aside-heading-text {
@@ -261,10 +262,10 @@ li {
 }
 
 /* Dummy Cards: */
-.dummy_cards{
+/* .dummy_cards{ */
   /* height: 494px; */
   /* width: 328px; */
-}
+/* } */
 
 .dummy_cards::before {
   content:"";
@@ -419,10 +420,6 @@ li {
 
   #topImg {
     display: none;
-  }
-
-  .aside-reason-imgs {
-    /* display: none; */
   }
 
   #thanksImg {
