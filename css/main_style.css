@@ -429,7 +429,7 @@ li {
   
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 575px) {
   .dropdown-menu {
       display: none !important;
   }
