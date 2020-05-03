@@ -66,6 +66,7 @@ header {
 
 .nav-item {
   margin-top: 8px;
+  white-space: nowrap;
 }
 
 #badge {
