@@ -80,7 +80,7 @@
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 50%;
+    /* line-height: 50%; */
     letter-spacing: normal;
     color: white;
     padding-top: .8rem;

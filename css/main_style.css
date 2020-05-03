@@ -384,6 +384,12 @@ li {
   margin: 0;
 }
 
+.bot-nav-socials {
+  background-color: var(--dark-sky-blue);
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /* ALL-COURSES.html: PAGE */
 
 #allCoursesMain {
